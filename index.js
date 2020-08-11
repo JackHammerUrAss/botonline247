@@ -1,22 +1,15 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
- 
+
 const prefix = '*';
- 
+
 const fs = require('fs');
- 
-client.commands = new Discord.Collection();
- 
-const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
-for(const file of commandFiles){
-    const command = require(`./commands/${file}`);
- 
-    client.commands.set(command.name, command);
-}
+
+const client = new Discord.client();
+
 client.once('ready', () => {
     console.log('MasterBot is online!');
 });
- 
+
 client.on('message', message =>{
     if(!message.content.startsWith(prefix) || message.author.bot) return;
  
@@ -29,24 +22,14 @@ client.on('message', message =>{
         client.commands.get('youtube').execute(message, args);
     }
 });
- 
-bot.on('message', message=>{
 
-    let args = message.content.slice(prefix.length).split(" ")
 
-    switch(args[0]){
-        case 'embed':
-            const embed = new Discord.messageEmbed()
-            .addfield('Player Name', message.author.username);
-            message.channel.send(embed);
-        break;
-    
-    }
-})
+
+
+
 
 
 
 
 
 client.login(process.env.token);
-
