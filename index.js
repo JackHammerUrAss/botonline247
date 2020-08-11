@@ -39,11 +39,9 @@ client.on('message', message =>{
 client.on('message', message=>{
     let args = message.content.substring(prefix.length).split(" ");
 
-    const Discord = 'embed';
-
     switch(args[0]){
         case 'embed':
-            const embed = new Discord.MessageEmbed()
+            const embed = new MessageEmbed()
             .setTitle('User Information')
             .addField('Discord Name', message.author.username)
             .addField('Current Server', message.guild.name)
@@ -51,8 +49,8 @@ client.on('message', message=>{
             .setThumbnail(message.author.displayAvatarURL());
             message.channel.send(embed);
         break;
-
-
+ 
+ 
     }
 })
 
