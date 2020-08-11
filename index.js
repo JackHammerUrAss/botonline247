@@ -5,7 +5,7 @@ const bot = new Discord.Client({disableEveryone: true});
 
 bot.on("ready", async () => {
     console.log(`${bot.user.username}is online`)
-    bot.user.setActivity("Rust", {type: "WATCHING", url:"https://twitch.tv/Strandable"});
+    bot.user.setActivity("*rust", {type: "PLAYING", url:"https://twitch.tv/Strandable"});
 })
 
 bot.on("message", async message => {
