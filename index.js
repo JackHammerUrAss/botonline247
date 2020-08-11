@@ -30,7 +30,7 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
     console.log(`${bot.user.username}is online`)
-    bot.user.setActivity("*help", {type: "COOKING", url:"https://twitch.tv/Strandable"});
+    bot.user.setActivity("*help", {type: "STREAMING", url:"https://twitch.tv/Strandable"});
 })
 
 bot.on("message", async message => {
