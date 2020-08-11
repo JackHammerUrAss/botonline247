@@ -30,9 +30,6 @@ bot.on("ready", async () => {
     bot.user.setActivity("*help", {type: "STREAMING", url:"https://twitch.tv/Strandable"});
 })
 
-const Discord = require("discord.js")
-const botconfig = require("../botsettings.json");
-
 
 module.exports.run = async (bot, message, args) => {
             
@@ -59,8 +56,6 @@ module.exports.run = async (bot, message, args) => {
     .catch(err => message.reply(`Something went wrong... ${err}`));
 
 }
-const Discord = require("discord.js")
-const botconfig = require("../botsettings.json");
 
 module.exports.run = async (bot, message, args) => {
     return message.channel.send("Hello")
