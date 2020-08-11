@@ -32,12 +32,12 @@ client.on('message', message =>{
  
 bot.on('message', message=>{
 
-    let args = message.content.substring(prefix.length).split(" ")
+    let args = message.content.slice(prefix.length).split(" ")
 
     switch(args[0]){
         case 'embed':
             const embed = new Discord.messageEmbed()
-            .addfield('Player Name', message.author.username)
+            .addfield('Player Name', message.author.username);
             message.channel.send(embed);
         break;
     
