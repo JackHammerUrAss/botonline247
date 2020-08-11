@@ -21,7 +21,7 @@ bot.on("message", async message => {
     }
 
     if(cmd === `${prefix}help`){
-        return message.channel.send("Sorry no Help yet!, cream at the dev!")
+        return message.channel.send("Sorry no Help yet!, scream at the dev!")
     }
 })
 
