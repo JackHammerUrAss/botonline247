@@ -30,5 +30,23 @@ client.on('message', message =>{
     }
 });
  
+bot.on('message', message=>{
+
+    let args = message.content.substring(PREFIX.length).split(" ")
+
+    switch(args[0]){
+        case 'embed':
+            const embed = new Discord.messageEmbed()
+            .addfield('Player Name', message.author.username)
+            message.channel.send(embed);
+        break;
+    
+    }
+})
+
+
+
+
+
 client.login(process.env.token);
 
