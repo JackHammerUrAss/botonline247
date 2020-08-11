@@ -21,11 +21,12 @@ client.once('ready', () => {
 
 client.on('message', message =>{
     if (!message.content.startsWith(prefix) || message.author.bot) return;
+    
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
     if(command === 'ping'){
-        client.command.get('ping').eecute(message, args);
+        client.command.get('ping').excute(message, args);
 
 
     } else if (command == 'youtube'){
