@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const botsettings = require('./botsettings.json');
 
 const bot = new Discord.Client({disableEveryone: true});
-
+const ha = require 
 require("./util/eventHandler")(bot)
 
 const fs = require("fs");
