@@ -6,7 +6,7 @@ const fs = require('fs');
 
 const client = new Discord.Client();
 
-client.commands = new discord.Collection();
+client.commands = new Discord.Collection();
 
 const commandsFiles = fs.readdirSync('')
 
