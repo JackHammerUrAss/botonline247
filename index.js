@@ -1,47 +1,24 @@
 const Discord = require('discord.js');
+const botsettings = require('./botsettings.json');
 
-const prefix = '*';
+const bot = new Discord.Client({disableEveryone: true});
 
-const botsettings = require('./botsettings');
+bot.on("ready", async () => {
+    console.log(`${bot.user.username}is online`)
+    bot.user.setActivity("Rust", {type: "STREAMING", url:"https://twitch.tv/Strandable"});
+})
 
-const fs = require('fs');
+bot.on("message", async message => {
+    if(message.author.bot || message.channel.type === "dm") return;
 
-const client = new Discord.Client();
+    let prefix = botsettings.prefix;
+    let messageArray = message.content.split(" ")
+    let cmd = messageArray[0];
+    let args = messageArray.slice(1)
 
-client.commands = new Discord.Collection();
-
-const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
-for(const file of commandFiles){
-    const command = require(`./commands/${file}`);
- 
-    client.commands.set(command.name, command);
-}
-
-client.once('ready', () => {
-    console.log('MasterBot is online!')
-    bot.user.setActivity("hello", {type: "WATCHING", url: "https://twitch.tv/Strandable"});
-
-});
-
-client.on('message', message =>{
-    if (!message.content.startsWith(prefix) || message.author.bot) return;
-    
-    const args = message.content.slice(prefix.length).split(/ +/);
-    const command = args.shift().toLowerCase();
-
-    if(command === 'ping'){
-        client.commands.get('ping').execute(message, args);
-
-
-    } else if (command === 'user'){
-        client.commands.get('user').execute(message, args);
-    
-
-    } else if (command == 'youtube'){}
-});
-
-
-
-
+    if(cmd === `${prefix}hi`){
+        return message.channel.send("Hello")
+    }
+})
 
 client.login(process.env.token);
