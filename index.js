@@ -8,10 +8,10 @@ const client = new Discord.Client();
 
 client.commands = new Discord.Collection();
 
-const CommandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
+const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles){
     const command = require(`./commands/${file}`);
-
+ 
     client.commands.set(command.name, command);
 }
 
@@ -35,28 +35,6 @@ client.on('message', message =>{
 
 
 
-
-
-
-client.on('message', message=>{
-    let args = message.content.substring(prefix.length).split(" ");
-
-    const Discord = 'embed';
-
-    switch(args[0]){
-        case 'embed':
-            const embed = new MessageEmbed()
-            .setTitle('User Information')
-            .addField('Discord Name', message.author.username)
-            .addField('Current Server', message.guild.name)
-            .setColor(0xF1C40F)
-            .setThumbnail(message.author.displayAvatarURL());
-            message.channel.send(embed);
-        break;
-
-
-    }
-})
 
 
 client.login(process.env.token);
