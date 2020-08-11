@@ -13,10 +13,9 @@ for(const file of commandFiles){
  
     client.commands.set(command.name, command);
 }
-
+client.once('ready', () => {
     console.log('MasterBot is online!');
-
-bot.on('ready', () =>
+});
  
 client.on('message', message =>{
     if(!message.content.startsWith(prefix) || message.author.bot) return;
@@ -29,7 +28,7 @@ client.on('message', message =>{
     } else if (command == 'youtube'){
         client.commands.get('youtube').execute(message, args);
     }
-}));
+});
  
 client.login(process.env.token);
 
