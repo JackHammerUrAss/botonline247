@@ -4,7 +4,7 @@ const prefix = '*';
 
 const fs = require('fs');
 
-const client = new Discord.client();
+const client = new Discord.Client();
 
 client.once('ready', () => {
     console.log('MasterBot is online!');
