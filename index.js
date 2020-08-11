@@ -2,6 +2,8 @@ const Discord = require('discord.js');
 
 const prefix = '*';
 
+const botsettings = require('./botsettings');
+
 const fs = require('fs');
 
 const client = new Discord.Client();
@@ -16,7 +18,9 @@ for(const file of commandFiles){
 }
 
 client.once('ready', () => {
-    console.log('MasterBot is online!');
+    console.log('MasterBot is online!')
+    bot.user.setActivity("hello", {type: "WATCHING", url: "https://twitch.tv/Strandable"});
+
 });
 
 client.on('message', message =>{
