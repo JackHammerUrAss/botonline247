@@ -43,7 +43,7 @@ client.on('message', message=>{
 
     switch(args[0]){
         case 'embed':
-            const embed = new RichEmbed()
+            const embed = newMessageEmbed()
             .setTitle('User Information')
             .addField('Discord Name', message.author.username)
             .addField('Current Server', message.guild.name)
