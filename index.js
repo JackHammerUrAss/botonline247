@@ -30,7 +30,7 @@ client.on('message', message =>{
 
 
     } else if (command == 'user'){
-        client.commands.get('profile').execute(message, args);
+        client.commands.get('user').execute(message, args);
     
 
     } else if (command == 'youtube'){}
