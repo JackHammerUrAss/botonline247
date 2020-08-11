@@ -29,10 +29,12 @@ client.on('message', message =>{
         client.commands.get('ping').execute(message, args);
 
 
-    } else if (command == 'youtube'){
+    } else if (command == 'user'){
+        client.commands.get('profile').execute(message, args);
+    
 
-    }
-})
+    } else if (command == 'youtube'){}
+});
 
 
 
