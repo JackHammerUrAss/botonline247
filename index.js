@@ -19,6 +19,10 @@ bot.on("message", async message => {
     if(cmd === `${prefix}hi`){
         return message.channel.send("Hello")
     }
+
+    if(cmd === `${prefix}help`){
+        return message.channel.send("Sorry no Help yet!, cream at the dev!")
+    }
 })
 
 bot.login(process.env.token);
