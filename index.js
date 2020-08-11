@@ -30,7 +30,7 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
     console.log(`${bot.user.username}is online`)
-    bot.user.setActivity("*help", {type: "PLAYING", url:"https://twitch.tv/Strandable"});
+    bot.user.setActivity("*help", {type: "COOKING", url:"https://twitch.tv/Strandable"});
 })
 
 bot.on("message", async message => {
@@ -44,7 +44,7 @@ bot.on("message", async message => {
     if(!message.content.startsWith(prefix)) return;
     let commandfile = bot.commands.get(cmd.slice(prefix.length)) || bot.commands.get(bot.aliases.get(cmd.slice(prefix.length)))
     if(commandfile) commandfile.run(bot,message,args)
-    
+
 
     if(cmd === `${prefix}hi`){
         return message.channel.send("Hello")
