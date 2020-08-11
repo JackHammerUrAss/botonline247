@@ -36,23 +36,7 @@ client.on('message', message =>{
     } else if (command == 'youtube'){}
 });
 
-client.on('message', message=>{
-    let args = message.content.substring(prefix.length).split(" ");
 
-    switch(args[0]){
-        case 'embed':
-            const embed = new MessageEmbed()
-            .setTitle('User Information')
-            .addField('Discord Name', message.author.username)
-            .addField('Current Server', message.guild.name)
-            .setColor(0xF1C40F)
-            .setThumbnail(message.author.displayAvatarURL());
-            message.channel.send(embed);
-        break;
- 
- 
-    }
-})
 
 
 
