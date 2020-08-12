@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
      .setColor('#bb53fc')
      .setThumbnail('https://www.sammobile.com/wp-content/uploads/2019/10/Battery-Guardian.png')
      .setImage('https://www.sammobile.com/wp-content/uploads/2019/10/Battery-Guardian.png')
-     .setFooter('This is a footer example')
+     .setFooter('This is a footer example', 'https://www.sammobile.com/wp-content/uploads/2019/10/Battery-Guardian.png')
     
     message.channel.send(embed)
 }
