@@ -6,6 +6,7 @@ module.exports.run = async (bot, message, args) => {
      .setURL('https://www.roblox.com/users/92044277/profile')
      .setAuthor("beep")
      .setDescription("This is a Test Description")
+     .setColor('#bb53fc')
     
     message.channel.send(embed)
 }
