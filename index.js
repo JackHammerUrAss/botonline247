@@ -10,6 +10,11 @@ bot.on("guildMemberAdd", member => {
     welcomeCHannel.send (`welcome! ${member}`)
 })
 
+bot.on("guildMemberRemove", member => {
+    const welcomeCHannel = member.guild.publicUpdatesChannel.find(channel => channel.name === 'gate')
+    welcomeCHannel.send (`Goodbye! ${member}`)
+})
+
 require("./util/eventHandler")(bot)
 
 const fs = require("fs");
