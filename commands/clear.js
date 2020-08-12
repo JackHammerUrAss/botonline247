@@ -34,3 +34,4 @@ module.exports.config = {
     accessableby: "Members",
     aliases: ['c', 'purge']
 }
+model.exports.config

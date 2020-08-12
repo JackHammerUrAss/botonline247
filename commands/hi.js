@@ -12,3 +12,4 @@ module.exports.config = {
     accessableby: "Members",
     aliases: ['h']
 }
+model.exports.config
