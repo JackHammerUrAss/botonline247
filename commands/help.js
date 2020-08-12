@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
         var embed = new Discord.MessageEmbed()
             .setAuthor(`Here is the Avaible Commands to use:`)
             .setDescription('```hi | hello | mute | unmute | addrole | removerole | embed | kick | ban```')
-            .addFields({ name: 'Prefix', value: '```?```', inline: true})
+            .addFields({ name: 'Prefix', value: '```*```', inline: true})
             .setColor('#00FFF3')
             
         message.channel.send(embed);
