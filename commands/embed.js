@@ -1,9 +1,8 @@
 const Discord = require("discord.js")
-const botconfig = require("../botsettings.json");
 
-odule.exports.run = async (bot, message, args) => {
-    const embed = new Discord.MessageEmbed();
-        .setTitle("this is a test Embed")
+module.exports.run = async (bot, message, args) => {
+    const embed = new Discord.MessageEmbed()
+     .setTitle('This is a test Embed.')
     
     message.channel.send(embed)
 }
