@@ -6,13 +6,13 @@ const botsettings = require('./botsettings.json');
 const bot = new Discord.Client({disableEveryone: true});
 
 bot.on("guildMemberAdd", member => {
-    const welcomeCHannel = member.guild.publicUpdatesChannel.find(channel => channel.name === 'gate')
-    welcomeCHannel.send (`welcome! ${member}`)
+    const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'gate')
+    welcomeChannel.send (`Welcome! ${member}`)
 })
 
 bot.on("guildMemberRemove", member => {
-    const welcomeCHannel = member.guild.publicUpdatesChannel.find(channel => channel.name === 'gate')
-    welcomeCHannel.send (`Goodbye! ${member}`)
+    const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'gate')
+    welcomeChannel.send (`Goodbye! ${member}`)
 })
 
 require("./util/eventHandler")(bot)
@@ -52,4 +52,5 @@ bot.on("message", async message => {
     if(commandfile) commandfile.run(bot,message,args)
 
 })
+
 bot.login(process.env.token);
