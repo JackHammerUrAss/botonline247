@@ -3,17 +3,17 @@ const botconfig = require("../botsettings.json");
 
 module.exports.run = async (bot, message, args) => {
     if(!message.member.hasPermission('KICK_MEMBERS'))
-        message.channel.send("you don't have permission to use that command!");
+        message.channel.send("You don't have permission to use that command.");
     else {
-        let member = message.guild.member.cache.get(args);
+        let member = message.guild.members.cache.get(args);
         if(member) {
         try {
             await member.kick();
-            console.log('kicked');
-            message.channel.send(`${member}, kicked!`)
+            console.log('Kicked');
+            message.channel.send(`${member}, Kicked!`)
         }
             catch(err) {
-            console.log(err) ;         
+            console.log(err);
         }
     }
 }
@@ -21,8 +21,8 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.config = {
     name: "kick",
-    Description: "kicks a user",
-    usage: "*kick", 
+    description: "Kicks a user",
+    usage: "*kick",
     accessableby: "Admins",
     aliases: []
 }
