@@ -5,6 +5,11 @@ const botsettings = require('./botsettings.json');
 
 const bot = new Discord.Client({disableEveryone: true});
 
+bot.on("ready", async () => {
+    console.log(`${bot.user.username} is online`)
+    bot.user.setActivity("*help || MasterBot", {type: "STREAMING", url:"https://www.twitch.tv/grandmasterbot_twitch"});
+})
+
 bot.on("guildMemberAdd", member => {
     const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'gate')
     welcomeChannel.send (`Welcome! ${member}`)
