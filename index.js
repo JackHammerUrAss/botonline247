@@ -5,6 +5,11 @@ const botsettings = require('./botsettings.json');
 
 const bot = new Discord.Client({disableEveryone: true});
 
+bot.on("guildMemberAdd", member => {
+    const welcomeCHannel = member.guild.publicUpdatesChannel.find(channel => channel.name === 'gate')
+    welcomeCHannel.send (`welcome! ${member}`)
+})
+
 require("./util/eventHandler")(bot)
 
 const fs = require("fs");
