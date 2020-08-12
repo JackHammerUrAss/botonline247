@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
      .setDescription("This is a Test Description")
      .setColor('#bb53fc')
      .setThumbnail('https://www.sammobile.com/wp-content/uploads/2019/10/Battery-Guardian.png')
-     .setImage('https://lh3.googleusercontent.com/ugeKQVgteMuVP9U4oABaTiOezA34SSqIQ5RUHpR_0u1EkTGYkv1EIYXF-VvOjB8yba9kUhk=s170')
+     .setImage('https://www.sammobile.com/wp-content/uploads/2019/10/Battery-Guardian.png')
     
     message.channel.send(embed)
 }
