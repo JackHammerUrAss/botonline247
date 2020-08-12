@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
      .setImage('https://www.sammobile.com/wp-content/uploads/2019/10/Battery-Guardian.png')
      .setFooter('This is a footer example', 'https://www.sammobile.com/wp-content/uploads/2019/10/Battery-Guardian.png')
      .addFields(
-         { name: 'test number 1', value: 'this is a example value'},
+         { name: 'test number 1', value: 'this is a example value', inline},
          { name: 'test number 2', value: 'this is a example value'}
      )
     
