@@ -5,6 +5,7 @@ module.exports.run = async (bot, message, args) => {
      .setTitle('This is a test Embed.')
      .setURL('https://www.roblox.com/users/92044277/profile')
      .setAuthor("beep")
+     .setDescription("This is a Test Description")
     
     message.channel.send(embed)
 }
