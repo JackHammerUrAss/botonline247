@@ -14,8 +14,11 @@ module.exports.run = async (bot, message, args) => {
          { name: 'test number 1', value: 'this is a example value', inline: true},
          { name: 'test number 2', value: 'this is a example value', inline: true}
      )
+     .setTimestamp()
+         
+     
     
-    message.channel.send(embed)
+    message.channel.send(embed);
 }
 
 module.exports.config = {
