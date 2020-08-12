@@ -2,13 +2,13 @@ const Discord = require("discord.js")
 const botconfig = require("../botsettings.json");
 
 module.exports.run = async (bot, message, args) => {
-    return message.channel.send("Pong!")
+    return message.channel.send("Click on my name and then on 'watch'!")
 }
 
 module.exports.config = {
-    name: "ping",
-    description: "",
-    usage: "*ping",
+    name: "Twitch",
+    description: "twitch location",
+    usage: "*Twitch",
     accessableby: "Members",
-    aliases: ['ping']
+    aliases: ['Twitch']
 }
