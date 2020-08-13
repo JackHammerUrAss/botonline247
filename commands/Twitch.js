@@ -3,7 +3,7 @@ const Discord = require("discord.js")
 module.exports.run = async (bot, message, args) => {
     const embed = new Discord.MessageEmbed()
      .setTitle('GrandMasterBot_Twitch.')
-     .setURL('https://www.roblox.com/users/92044277/profile')
+     .setURL('https://www.twitch.tv/grandmasterbot_twitch')
      .setAuthor("MasterBot")
      .setDescription("click the link above to gain acces to the twitch account!")
      .setColor('#bb53fc')
