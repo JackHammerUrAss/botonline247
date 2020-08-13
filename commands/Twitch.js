@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
      .setAuthor("MasterBot")
      .setDescription("click the link above to gain acces to the twitch account!")
      .setColor('#bb53fc')
-     .setThumbnail('https://www.sammobile.com/wp-content/uploads/2019/10/Battery-Guardian.png')
+     .setThumbnail('https://maxcdn.icons8.com/Share/icon/Logos/twitch1600.png')
      .setFooter('', 'https://www.sammobile.com/wp-content/uploads/2019/10/Battery-Guardian.png')
      .addFields(
          { name: 'Rust', value: 'Every monday', inline: true},
