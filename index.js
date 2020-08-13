@@ -5,6 +5,10 @@ const botsettings = require('./botsettings.json');
 
 const bot = new Discord.Client({disableEveryone: true});
 
+bot.on('serverNewMember', function(server, user) {
+    user.addTo(server.roles.get("name", "Bot Tester"));
+});
+
 bot.on("ready", async () => {
     console.log(`${bot.user.username} is online`)
     bot.user.setActivity("*help || MasterBot", {type: "STREAMING", url:"https://www.twitch.tv/grandmasterbot_twitch"});
