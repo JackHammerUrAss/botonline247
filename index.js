@@ -5,9 +5,11 @@ const botsettings = require('./botsettings.json');
 
 const bot = new Discord.Client({disableEveryone: true});
 
-bot.on('serverNewMember', function(server, user) {
-    user.addTo(server.roles.get("name", "Bot Tester"));
+bot.on("messageReactionAdd", function(users) {
+    users.addRole(users.guild.roles.find("id", 743588953273270332));
+    users.removeRole(users.guild.roles.find("id", 743589460075085877));
 });
+
 
 bot.on("ready", async () => {
     console.log(`${bot.user.username} is online`)
