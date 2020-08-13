@@ -1,14 +1,29 @@
 const Discord = require("discord.js")
-const botconfig = require("../botsettings.json");
 
 module.exports.run = async (bot, message, args) => {
-    return message.channel.send("Click on my name and then on 'watch'!")
+    const embed = new Discord.MessageEmbed()
+     .setTitle('GrandMasterBot_Twitch.')
+     .setURL('https://www.roblox.com/users/92044277/profile')
+     .setAuthor("**Twitch**")
+     .setDescription("This is a Test Description")
+     .setColor('#bb53fc')
+     .setThumbnail('https://www.sammobile.com/wp-content/uploads/2019/10/Battery-Guardian.png')
+     .setFooter('This is a footer example', 'https://www.sammobile.com/wp-content/uploads/2019/10/Battery-Guardian.png')
+     .addFields(
+         { name: 'test number 1', value: 'this is a example value', inline: true},
+         { name: 'test number 2', value: 'this is a example value', inline: true}
+     )
+     .setTimestamp()
+         
+     
+    
+    message.channel.send(embed);
 }
 
 module.exports.config = {
-    name: "Twitch",
-    description: "twitch location",
-    usage: "*Twitch",
+    name: "twitch",
+    description: "",
+    usage: "*twitch",
     accessableby: "Members",
-    aliases: ['Twitch']
+    aliases: []
 }
