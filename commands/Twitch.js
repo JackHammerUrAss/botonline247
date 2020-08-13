@@ -4,14 +4,14 @@ module.exports.run = async (bot, message, args) => {
     const embed = new Discord.MessageEmbed()
      .setTitle('GrandMasterBot_Twitch.')
      .setURL('https://www.roblox.com/users/92044277/profile')
-     .setAuthor("**Twitch**")
-     .setDescription("This is a Test Description")
+     .setAuthor("MasterBot")
+     .setDescription("click the link above to gain acces to the twitch account!")
      .setColor('#bb53fc')
      .setThumbnail('https://www.sammobile.com/wp-content/uploads/2019/10/Battery-Guardian.png')
-     .setFooter('This is a footer example', 'https://www.sammobile.com/wp-content/uploads/2019/10/Battery-Guardian.png')
+     .setFooter('', 'https://www.sammobile.com/wp-content/uploads/2019/10/Battery-Guardian.png')
      .addFields(
-         { name: 'test number 1', value: 'this is a example value', inline: true},
-         { name: 'test number 2', value: 'this is a example value', inline: true}
+         { name: 'Rust', value: 'Every monday', inline: true},
+         { name: 'Music', value: 'any random moment ', inline: true}
      )
      .setTimestamp()
          
