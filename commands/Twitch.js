@@ -2,7 +2,7 @@ const Discord = require("discord.js")
 
 module.exports.run = async (bot, message, args) => {
     const embed = new Discord.MessageEmbed()
-     .setTitle('GrandMasterBot_Twitch.')
+     .setTitle('https://www.twitch.tv/grandmasterbot_twitch')
      .setURL('https://www.twitch.tv/grandmasterbot_twitch')
      .setAuthor("MasterBot")
      .setDescription("click the link above to gain acces to the twitch account!")
