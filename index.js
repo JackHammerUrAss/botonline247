@@ -68,7 +68,7 @@ bot.on("message", async message => {
         .setDescription('React to gain the role!')
         .setColor('PURPLE')
         let msgEmbed = await message.channel.send(embed)
-        msgEmbed.react('743816676943855646')
+        msgEmbed.react('✔')
     }
 })
 
@@ -79,7 +79,11 @@ bot.on("messageReactionAdd", async (reaction, user) => {
     if (user.bot) return;
     if (!reaction.message.guild) return; 
 
-    if (reaction.message.channel.id === "743069846685614141")
+    if (reaction.message.channel.id === "743069846685614141") {
+        if(reaction.emoji.name === '✔') {
+            await reaction.message.guild.member.cache.get(user.id).roles.add("743585048737087589")
+        }
+    }
 
 })
 
