@@ -68,7 +68,7 @@ bot.on("message", async message => {
         .setDescription('React to gain the role!')
         .setColor('PURPLE')
         let msgEmbed = await message.channel.send(embed)
-        msgEmbed.react('👾')
+        msgEmbed.react('743816676943855646')
     }
 })
 
