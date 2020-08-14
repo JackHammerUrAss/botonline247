@@ -11,12 +11,12 @@ bot.on("ready", async () => {
 })
 
 bot.on("guildMemberAdd", member => {
-    const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'gate')
+    const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'welcome')
     welcomeChannel.send (`Welcome! ${member}`)
 })
 
 bot.on("guildMemberRemove", member => {
-    const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'gate')
+    const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'welcome')
     welcomeChannel.send (`Goodbye! ${member}`)
 })
 
