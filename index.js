@@ -2,8 +2,30 @@
   
 const Discord = require('discord.js');
 const botsettings = require('./botsettings.json');
+bot.on("message", async message => {
+if(message.author.bot || message.channel.type === "dm") return;
+
+const messageArray = message.content.split(' ');
+const cmd = messageArray[0];
+const args = messageArray.slice(1);
+
+if (cmd === '*poll'){
+    let pollChannel = message.mentions.channel.first();
+    let pollDescription = args.slice(1).join(' ');
+
+    let embedPoll = new Discord.MessageEmbed()
+    .setTitle ('New Poll')
+    .setDescription(pollDescription)
+    .setColor('YELLOW')
+    pollChannel.send(embedPoll)
+}
+})
+
+
 
 const bot = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
+
+
 
 bot.on("ready", async () => {
     console.log(`${bot.user.username} is online`)
