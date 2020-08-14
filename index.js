@@ -110,7 +110,7 @@ bot.on("message", async message => {
     const args = messageArray.slice(1);
 
     if (cmd === '*poll'){
-        let pollChannel = message.mentions.channel.first();
+        let pollChannel = message.mentions.channels.first();
      let pollDescription = args.slice(1).join(' ');
 
      let embedPoll = new Discord.MessageEmbed()
