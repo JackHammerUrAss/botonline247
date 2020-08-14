@@ -117,7 +117,9 @@ bot.on("message", async message => {
      .setTitle ('New Poll')
      .setDescription(pollDescription)
      .setColor('YELLOW')
-     pollChannel.send(embedPoll)
+     let msgEmbed = await pollChannel.send(embedPoll);
+     await msgEmbed.react('👍')
+     await msgEmbed.react('👎')
     }
 })
 
