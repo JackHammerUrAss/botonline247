@@ -3,7 +3,7 @@
 const Discord = require('discord.js');
 const botsettings = require('./botsettings.json');
 
-const bot = new Discord.Client({disableEveryone: true});
+const bot = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
 
 bot.on("messageReactionAdd", function(users) {
     users.addRole(users.guild.roles.find("id", 743588953273270332));
@@ -71,5 +71,17 @@ bot.on("message", async message => {
         msgEmbed.react('743816676943855646')
     }
 })
+
+bot.on("messageReactionAdd", async (reaction, user) => {
+    if (reaction.message.partial) await reaction.message.fetch();
+    if (reaction.partial) await reaction.fetch();
+
+    if (user.bot) return;
+    if (!reaction.message.guild) return; 
+
+    if (reaction.message.channel.id === "743069846685614141")
+
+})
+
 
 bot.login(process.env.token);
