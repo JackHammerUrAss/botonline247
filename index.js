@@ -81,7 +81,7 @@ bot.on("messageReactionAdd", async (reaction, user) => {
 
     if (reaction.message.channel.id === "743069846685614141") {
         if(reaction.emoji.name === '✔') {
-            await reaction.message.guild.member.cache.get(user.id).roles.add("743585048737087589")
+            await reaction.message.guild.members.cache.get(user.id).roles.add("743585048737087589")
         }
     }
 
