@@ -5,12 +5,6 @@ const botsettings = require('./botsettings.json');
 
 const bot = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
 
-bot.on("messageReactionAdd", function(users) {
-    users.addRole(users.guild.roles.find("id", 743588953273270332));
-    users.removeRole(users.guild.roles.find("id", 743589460075085877));
-});
-
-
 bot.on("ready", async () => {
     console.log(`${bot.user.username} is online`)
     bot.user.setActivity("*help || MasterBot", {type: "STREAMING", url:"https://www.twitch.tv/grandmasterbot_twitch"});
