@@ -62,6 +62,14 @@ bot.on("message", async message => {
     let commandfile = bot.commands.get(cmd.slice(prefix.length)) || bot.commands.get(bot.aliases.get(cmd.slice(prefix.length)))
     if(commandfile) commandfile.run(bot,message,args)
 
+    if(cmd === `${prefix}reactions`){
+        let embed = new Discord.MessageEmbed()
+        .setTitle('Reaction Roles')
+        .setDescription('React to gain the role!')
+        .setColor('PURPLE')
+        let msgEmbed = await message.channel.send(embed)
+        msgEmbed.react('👾')
+    }
 })
 
 bot.login(process.env.token);
