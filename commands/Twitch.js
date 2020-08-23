@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
      .setURL('https://www.twitch.tv/grandmasterbot_twitch')
      .setAuthor("MasterBot")
      .setDescription("click the link above to gain acces to the twitch account!")
-     .setColor('#bb53fc')
+     .setColor('#FFE8E8')
      .setThumbnail('https://maxcdn.icons8.com/Share/icon/Logos/twitch1600.png')
      .setFooter('', 'https://www.sammobile.com/wp-content/uploads/2019/10/Battery-Guardian.png')
      .addFields(
