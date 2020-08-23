@@ -13,7 +13,7 @@ const bot = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
 
 bot.on("ready", async () => {
     console.log(`${bot.user.username} is online`)
-    bot.user.setActivity("*help || MasterBot", {type: "STREAMING", url:"https://www.twitch.tv/grandmasterbot_twitch"});
+    bot.user.setActivity("*help || Apocolyptic Wulf ", {type: "STREAMING", url:"https://www.twitch.tv/grandmasterbot_twitch"});
 })
 
 bot.on("guildMemberAdd", member => {
