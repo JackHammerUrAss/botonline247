@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
      .setURL('https://www.roblox.com/users/92044277/profile')
      .setAuthor("beep")
      .setDescription("This is a Test Description")
-     .setColor('#bb53fc')
+     .setColor('#FFE8E8')
      .setThumbnail('https://www.sammobile.com/wp-content/uploads/2019/10/Battery-Guardian.png')
      .setFooter('This is a footer example', 'https://www.sammobile.com/wp-content/uploads/2019/10/Battery-Guardian.png')
      .addFields(
