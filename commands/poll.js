@@ -23,8 +23,8 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.config = {
     name: "poll",
-    description: "makes a poll (z!poll channel text",
-    usage: "z!poll",
+    description: "makes a poll (a!poll channel text",
+    usage: "a!poll",
     accessableby: "Admins",
     aliases: []
 }
