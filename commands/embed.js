@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
     const embed = new Discord.MessageEmbed()
      .setTitle('**Welcome to announcements**')
      .setURL('https://dolfinroemer.wixsite.com/apocolyptic-knights')
-     .setAuthor("https://dolfinroemer.wixsite.com/apocolyptic-knights")
+     .setAuthor("www.ApocolypticKnights.com")
      .setColor('FFE8E8')
      .setThumbnail('https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
      .setFooter('This is a footer example', 'https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
