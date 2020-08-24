@@ -44,7 +44,7 @@ bot.on("message", async message => {
         .setURL('https://dolfinroemer.wixsite.com/apocolyptic-knights')
         .setAuthor('Welcome!', 'https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Tick_Mark_Dark-512.png')
         .setColor('FFE8E8')
-        .setFields(
+        .addFields(
             {name: '**RULES**',value: '- \n -\n -'}
         )
         .setFooter('please react to this Embed to verify', 'https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
