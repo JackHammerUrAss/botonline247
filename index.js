@@ -40,14 +40,15 @@ bot.on("message", async message => {
     if(commandfile) commandfile.run(bot,message,args)
     if(cmd === `${prefix}tj`){
         let embed = new Discord.MessageEmbed()
-        .setTitle('***VERIFICATION EMBED***')
+        .setTitle('**WELCOME TO APOCOLYPTIC KNIGHTS**')
         .setURL('https://dolfinroemer.wixsite.com/apocolyptic-knights')
         .setAuthor('Welcome!', 'https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Tick_Mark_Dark-512.png')
         .setColor('FFE8E8')
         .addFields(
-            {name: '**RULES**',value: '- \n -\n -'}
+            {name: '**RULES**',value: '• No Spam in Text Chat (or) Voice Chat \n • Please do not use all CAPS...we can read your message just fine without it\n • No harassment, racism or hate speech of any kind...it will not be tolerated\n • Respect Admins as well as fellow discord users\n • No linking to other discord channels or advertising of any kind to any members\n • No pornography, violent or disturbing links, pictures or videos\n • Dont tell admins how to admin\n • No channel hopping. Which is joining multiple channels in a short time\n • Be respectful of others in voice & text chat\n • Keep text chats ON topic. Example: Suggestions in #suggestions chat\n • Admins reserve the right to mute/ban anyone as they see fit\n'} 
         )
         .setFooter('please react to this Embed to verify', 'https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
+        .setTimestamp()
          let msgEmbed = await message.channel.send(embed)
         msgEmbed.react('✅')
      
