@@ -2,16 +2,14 @@ const Discord = require("discord.js")
 
 module.exports.run = async (bot, message, args) => {
     const embed = new Discord.MessageEmbed()
-     .setTitle('This is a test Embed.')
-     .setURL('https://www.roblox.com/users/92044277/profile')
-     .setAuthor("beep")
-     .setDescription("This is a Test Description")
-     .setColor('#FFE8E8')
-     .setThumbnail('https://www.sammobile.com/wp-content/uploads/2019/10/Battery-Guardian.png')
-     .setFooter('This is a footer example', 'https://www.sammobile.com/wp-content/uploads/2019/10/Battery-Guardian.png')
+     .setTitle('**Welcome to announcements**')
+     .setURL('https://dolfinroemer.wixsite.com/apocolyptic-knights')
+     .setAuthor("https://dolfinroemer.wixsite.com/apocolyptic-knights")
+     .setColor('FFE8E8')
+     .setThumbnail('https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
+     .setFooter('This is a footer example', 'https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
      .addFields(
-         { name: 'test number 1', value: 'this is a example value', inline: true},
-         { name: 'test number 2', value: 'this is a example value', inline: true}
+         { name: '**Announcements channel**', value: 'click the link below the connect the channel to your server! \n you will receive news from our bot progress, server progress and website progress \n as well as giveaways and other fun stuff! \n to apply to APK head over to our website!', inline: true},
      )
      .setTimestamp()
          
@@ -23,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
 module.exports.config = {
     name: "embed",
     description: "",
-    usage: "*embed",
+    usage: "a!embed",
     accessableby: "Members",
     aliases: []
 }
