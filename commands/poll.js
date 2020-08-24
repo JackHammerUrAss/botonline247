@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
         let pollDescription = message.content.substring(message.content.indexOf(' ')+1);
 
         let embedPoll = new Discord.MessageEmbed()
-        .setTitle('#Team Zinc')
+        .setTitle('POLL TIME')
         .setDescription(pollDescription)
         .setColor('#FFE8E8')
         let msgEmbed = await pollChannel.send(embedPoll);
