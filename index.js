@@ -88,7 +88,7 @@ bot.on("message", async message => {
     const cmd = messageArray[0];
     const args = messageArray.slice(1);
 
-    if (cmd === 'z!announce'){
+    if (cmd === 'a!announce'){
         let pollChannel = message.mentions.channels.first();
         let pollDescription = args.slice(1).join(' ');
 
