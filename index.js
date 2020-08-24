@@ -98,7 +98,8 @@ bot.on("message", async message => {
         let pollDescription = args.slice(1).join(' ');
 
         let embedPoll = new Discord.MessageEmbed()
-        .setTitle('***ANOUNCEMENT***')
+        .setTitle('**ANOUNCEMENT**')
+        .setThumbnail('https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
         .setDescription(pollDescription)
         .setColor('#36ECE0')
         .setFooter('ZincBot', 'https://lh3.googleusercontent.com/2acydHF2nIOwboZ3a26ISfTaoSXud0e5pTxAvzrSGHu--Vul0pitDj0oK4yH4y8NJaXUCno=s85')
