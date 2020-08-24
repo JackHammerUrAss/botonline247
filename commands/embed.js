@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
      .setAuthor("www.ApocolypticKnights.com")
      .setColor('FFE8E8')
      .setThumbnail('https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
-     .setFooter('This is a footer example', 'https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
+     .setFooter('ApkBot', 'https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
      .addFields(
          { name: '**Announcements channel**', value: 'click the link below the connect the channel to your server! \n you will receive news from our bot progress,\n server progress \nwebsite progress \n as well as giveaways and other fun stuff! \n to apply to APK head over to our website!', inline: true},
      )
