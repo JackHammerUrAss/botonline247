@@ -65,26 +65,26 @@ bot.on("messageReactionAdd", async (reaction, user) => {
     if (user.bot) return;
     if (!reaction.message.guild) return;
 
-    if(reaction.message.channel.id === "746852142307999792"){
+    if(reaction.message.channel.id === "743069846685614141"){
       if (reaction.emoji.name === '✅'){
-          await reaction.message.guild.members.cache.get(user.id).roles.add('746852382666916002')
+          await reaction.message.guild.members.cache.get(user.id).roles.add('743589337945604196')
       }  
     }
 })
 
-bot.on('messageReactionRemove', async (reaction,user) => {
-    if (reaction.message.partial) await reaction.message.fetch();
-    if (reaction.partial) await reaction.fetch();
+//bot.on('messageReactionRemove', async (reaction,user) => {
+    //if (reaction.message.partial) await reaction.message.fetch();
+   // if (reaction.partial) await reaction.fetch();
 
-    if (user.bot) return;
-    if (!reaction.message.guild) return;
+    //if (user.bot) return;
+    //if (!reaction.message.guild) return;
 
-    if(reaction.message.channel.id === "746852142307999792"){
-        if (reaction.emoji.name === '✅'){
-          await reaction.message.guild.members.cache.get(user.id).roles.remove('746852382666916002')
-        }  
-    }
-})
+    //if(reaction.message.channel.id === "743069846685614141"){
+       // if (reaction.emoji.name === '✅'){
+          //await reaction.message.guild.members.cache.get(user.id).roles.remove('746852382666916002')
+       // }  
+  //  }
+//})
 
 bot.on("message", async message => {
     if(message.author.bot || message.channel.type === "dm") return;
