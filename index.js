@@ -42,9 +42,9 @@ bot.on("message", async message => {
         let embed = new Discord.MessageEmbed()
         .setTitle('***VERIFICATION EMBED***')
         .setAuthor('Welcome!', 'https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Tick_Mark_Dark-512.png')
-        .setDescription(' ----------------------\n ```rules```\n 1)No pornography, this includes links, words including it and anything else related.\n 2)Nothing against discords T.O.S, this includes cracking, and other blacklisted words.\n 3)Please respect one another. This includes members and staff.\n  No advertising in anyway shape or form, this includes YouTube links or Discord links.\n No Spamming in anyway.\n No NSFW at ALL!\n No harassment in anyway.\n No DM advertising.\n No account buying and or selling.\n Use the correct channels.\n If you would like to report anybody for breaking the rules, please message a staff member.\n If you disrespect moderators it will result in a ban.\n Do NOT @ Twist or @ Glob. DM him to talk to him.\n Breaking any of these will be a instant ban or mute depending on the rule that was broken.')
+        .setDescription(' ----------------------\n ```rules```\n 1)')
         .setColor('FFE8E8')
-        .setFooter('please react to this Embed to verify', 'https://lh3.googleusercontent.com/2acydHF2nIOwboZ3a26ISfTaoSXud0e5pTxAvzrSGHu--Vul0pitDj0oK4yH4y8NJaXUCno=s85')
+        .setFooter('please react to this Embed to verify', 'https://ibb.co/rMvDzvf')
          let msgEmbed = await message.channel.send(embed)
         msgEmbed.react('✅')
      
