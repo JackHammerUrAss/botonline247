@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
 
     if (cmd === 'a!poll'){
         let pollChannel = message.mentions.channels.first();
-        let pollDescription = messageArray.slice(1);
+        let pollDescription = message.content.substring(message.content.indexOf(' ')+1);
 
         let embedPoll = new Discord.MessageEmbed()
         .setTitle('#Team Zinc')
