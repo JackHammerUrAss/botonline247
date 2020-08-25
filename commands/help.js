@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
             .setAuthor(`Here are the Avaible Commands to use:`)
             .addFields(
                 { name: 'Prefix', value: '```a!```', inline: true},
-                { name: 'Basic Commands', value: '**a!invite** | sends the bot invite link \n **a!online** | Tells if the bot is online'},
+                { name: 'Basic Commands', value: '**a!invite** | sends the bot invite link \n **a!online** | Tells if the bot is online \n **a!website*** | Sends the website link'},
                 { name: 'Voice Commands (only works when VM is installed)', value: '**v!voice setup** | sets up the voice channels ( admin command )\n **v!invite** | VM invite link \n **v!lock** | locks VC \n **v!unlock** | Unlocks VC'}
             )
             .setColor('#00FFF3')
