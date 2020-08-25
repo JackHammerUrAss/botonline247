@@ -16,11 +16,11 @@ module.exports.run = async (bot, message, args) => {
             .setAuthor(`Here are the Avaible Commands to use:`)
             .addFields(
                 { name: 'Prefix', value: '```*```', inline: true},
-                { name: 'Basic Commands', value: '*a!invite* | sends the bot invite link \n a!online | Tells if the bot is online'},
+                { name: 'Basic Commands', value: '**a!invite** | sends the bot invite link \n **a!online** | Tells if the bot is online'},
                 { name: 'Voice Commands', value: 'may not be empty'}
             )
             .setColor('#00FFF3')
-            .setFooter('https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
+            .setFooter('APK','https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
             
         message.channel.send(embed);
     }
