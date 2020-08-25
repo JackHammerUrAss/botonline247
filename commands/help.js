@@ -14,9 +14,13 @@ module.exports.run = async (bot, message, args) => {
     if(!helpArgs[0]) {
         var embed = new Discord.MessageEmbed()
             .setAuthor(`Here are the Avaible Commands to use:`)
-            .setDescription('```hi | hello | mute | unmute | addrole | removerole | embed | kick | ban```')
-            .addFields({ name: 'Prefix', value: '```*```', inline: true})
+            .addFields(
+                { name: 'Prefix', value: '```*```', inline: true},
+                { name: 'Basic Commands', value: ''},
+                { name: 'Voice Commands', value: ''}
+            )
             .setColor('#00FFF3')
+            .setFooter('https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
             
         message.channel.send(embed);
     }
