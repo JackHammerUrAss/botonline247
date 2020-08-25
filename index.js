@@ -1,6 +1,23 @@
 const Discord = require('discord.js');
 const botsettings = require('./botsettings.json');
 const bot = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
+bot.botsettings = botsettings; 
+const {GiveawaysManager} = require('discord-giveaways');
+
+bot.GiveawaysManager = new GiveawaysManager(bot, {
+    storage: "./giveaways.json",
+    updateCountdownEvery: 5000,
+    default: {
+        botsCanWin: false,
+        exemptPermissions: ["MANAGE_MESSAGES", "ADMINISTRATOR"],
+        embedColor: "#FF0000",
+        reaction: "🎉"
+    }
+
+});
+
+
+
 
 require("./util/eventHandler")(bot)
 
