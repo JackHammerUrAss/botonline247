@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
             .setAuthor(`Here are the Avaible Commands to use:`)
             .addFields(
                 { name: 'Prefix', value: '```*```', inline: true},
-                { name: 'Basic Commands', value: ''},
+                { name: 'Basic Commands', value: '*a!invite* | sends the bot invite link \n a!online | Tells if the bot is online'},
                 { name: 'Voice Commands', value: ''}
             )
             .setColor('#00FFF3')
