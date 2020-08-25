@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
             .addFields(
                 { name: 'Prefix', value: '```a!```', inline: true},
                 { name: 'Basic Commands', value: '**a!invite** | sends the bot invite link \n **a!online** | Tells if the bot is online'},
-                { name: 'Voice Commands (only works when VM is installed)', value: '**v!voice setup** | sets up the voice channels ( admin command )\n **v!invite** | VM invite link \n **v!lock** | locks VC \n **v!unlock | Unlocks VC'}
+                { name: 'Voice Commands (only works when VM is installed)', value: '**v!voice setup** | sets up the voice channels ( admin command )\n **v!invite** | VM invite link \n **v!lock** | locks VC \n **v!unlock** | Unlocks VC'}
             )
             .setColor('#00FFF3')
             .setFooter('APK','https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
