@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
         var embed = new Discord.MessageEmbed()
             .setAuthor(`Here are the Avaible Commands to use:`)
             .addFields(
-                { name: 'Prefix', value: '```*```', inline: true},
+                { name: 'Prefix', value: '```a!```', inline: true},
                 { name: 'Basic Commands', value: '**a!invite** | sends the bot invite link \n **a!online** | Tells if the bot is online'},
                 { name: 'Voice Commands', value: 'may not be empty'}
             )
