@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
     if(usedCommand.has(message.author.id)){
         message.reply('no spamming please...')
     } else {
-        message.reply('https://bit.ly/2Y6xFgy')
+        message.reply('https://discord.com/api/oauth2/authorize?client_id=742517502839619625&permissions=2147483639&scope=bot')
         
         
         usedCommand.add(message.author.id);
