@@ -6,14 +6,14 @@ module.exports.run = async (bot, message, args) => {
         message.channel.send("You don't have permission to use that command.");
      else {
         const embed = new Discord.MessageEmbed()
-        .setTitle('**Welcome to announcements**')
+        .setTitle('**------------------------**')
         .setURL('https://dolfinroemer.wixsite.com/apocolyptic-knights')
         .setAuthor("www.ApocolypticKnights.com")
         .setColor('FFE8E8')
         .setThumbnail('https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
         .setFooter('ApkBot', 'https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
         .addFields(
-            { name: '**Announcements channel**', value: 'click the link below the connect the channel to your server! \n you will receive news from our bot progress,\n server progress \nwebsite progress \n as well as giveaways and other fun stuff! \n to apply to APK head over to our website!', inline: true},
+            { name: '**You are a Creative Manager?**', value: 'that means you dont exacly know what to do or expet? \n we will help you a bit on that: \n you can click the blue line above to go the webpage with a very clear explanation on what to do.', inline: true},
         )
         .setTimestamp()
             
