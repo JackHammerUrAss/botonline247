@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
         .setThumbnail('https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
         .setFooter('ApkBot', 'https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
         .addFields(
-            { name: '**You are a Creative Manager?**', value: 'that means you dont exacly know what to do or expet? \n we will help you a bit on that: \n you can click the blue line above to go the webpage with a very clear explanation on what to do.', inline: true},
+            { name: '**You are a Creative Manager?**', value: 'and you dont exacly know what to do or expet? \n we will help you a bit on that: \n you can click the blue line above to go the webpage with a very clear explanation on what to do.', inline: true},
         )
         .setTimestamp()
             
