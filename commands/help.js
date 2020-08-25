@@ -40,7 +40,7 @@ module.exports.run = async (bot, message, args) => {
             - **Command's Permissions:** __${command.config.accessableby || "Members"}__
             - **Command's Aliases:** __${command.config.aliases || "No Aliases"}__
             `)
-            .setColor('#2EFF00')
+            .setColor('#00FFF3')
 
         message.channel.send(embed);
     }}
@@ -49,7 +49,7 @@ module.exports.run = async (bot, message, args) => {
 module.exports.config = {
     name: "help",
     description: "",
-    usage: "*help",
+    usage: "a!help",
     accessableby: "Members",
     aliases: []
 }
