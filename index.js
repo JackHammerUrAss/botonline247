@@ -21,6 +21,10 @@ bot.on("guildMemberAdd", member => {
     welcomeChannel.send (`user: ${member} has entered the APK discord`)
 })
 
+bot.on("guildMemberRemove", member => {
+    const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'welcome')
+    welcomeChannel.send (`user: ${member} has Left the APK discord`)
+})
 
 
 require("./util/eventHandler")(bot)
