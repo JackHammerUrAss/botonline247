@@ -1,5 +1,4 @@
 
-const bot = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
 const Discord = require("discord.js")
 const botconfig = require("../botsettings.json");
 
@@ -15,7 +14,7 @@ odule.exports.run = async (bot, message, args) => {
             member.roles.add(mutedRole);
             member.roles.remove(verifiedRole);
             message.channel.send("User was Successfully muted.");
-            const welcomeChannel = reaction.message.guild.channels.cache.find(channel => channel.name === 'welcome')
+            const welcomeChannel = message.guild.channels.cache.find(channel => channel.name === 'welcome')
             welcomeChannel.send(` user: ${user} has muted someone `)
         }
 }
