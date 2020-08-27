@@ -16,6 +16,10 @@ bot.GiveawaysManager = new GiveawaysManager(bot, {
 
 });
 
+bot.on("guildMemberAdd", member => {
+    const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'welcome')
+    welcomeChannel.send (`user: ${member} has entered the APK discord`)
+})
 
 
 
