@@ -1,6 +1,7 @@
 
 const bot = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
-
+const Discord = require("discord.js")
+const botconfig = require("../botsettings.json");
 
 
 odule.exports.run = async (bot, message, args) => {
