@@ -94,7 +94,7 @@ bot.on("messageReactionAdd", async (reaction, user) => {
       if (reaction.emoji.name === '✅'){
           await reaction.message.guild.members.cache.get(user.id).roles.add('743589337945604196')
           const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'welcome')
-          await welcomeChannel.send (`user: ${member} has verified`)
+          await welcomeChannel.send (`user: ${user} has verified`)
       }  
     }
 })
