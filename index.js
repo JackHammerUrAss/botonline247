@@ -89,7 +89,8 @@ bot.on("messageReactionAdd", async (reaction, user) => {
     if(reaction.message.channel.id === "743069846685614141"){
       if (reaction.emoji.name === '✅'){
           await reaction.message.guild.members.cache.get(user.id).roles.add('743589337945604196')
-          await welcomeChannel.send (`user: ${member} has entered the APK discord`)
+          const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'welcome')
+          await welcomeChannel.send (`user: ${member} has verified`)
       }  
     }
 })
