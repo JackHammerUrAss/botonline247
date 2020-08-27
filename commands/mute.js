@@ -9,6 +9,8 @@ module.exports.run = async (bot, message, args) => {
             member.roles.add(mutedRole);
             member.roles.remove(verifiedRole);
             message.channel.send("User was Successfully muted.");
+            const welcomeChannel = reaction.message.guild.channels.cache.find(channel => channel.name === 'welcome')
+            welcomeChannel.send(` user: ${user} has muted someone `)
         }
 }
 
