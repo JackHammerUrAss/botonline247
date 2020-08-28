@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
                 .addFields(
                 { name: 'Prefix', value: '```a!```', inline: true},
                 { name: 'Basic Commands', value: '**a!invite** | sends the bot invite link \n **a!online** | Tells if the bot is online \n **a!website** | Sends the website link'},
-                { name: 'Voice Commands (only works when VM is installed)', value: '**v!voice setup** | sets up the voice channels ( admin command )\n**v!invite** | VM invite link \n**v!lock** | locks VC \n**v!unlock** | Unlocks VC \n**v!voice name <name>** | change the vc name \n**v!voice limit <limit>** \n**v!voice claim** | claim a vc \n**v!voice permit <@user>** | add a user to your vc \n**v!voice deny <@user> | deny a user from joining your vc'},
+                { name: 'Voice Commands (only works when VM is installed)', value: '**v!voice setup** | sets up the voice channels ( admin command )\n**v!invite** | VM invite link \n**v!lock** | locks VC \n**v!unlock** | Unlocks VC \n**v!voice name <name>** | change the vc name \n**v!voice limit <limit>** \n**v!voice claim** | claim a vc \n**v!voice permit <@user>** | add a user to your vc \n**v!voice deny <@user>** | deny a user from joining your vc'},
                 { name: 'Staff Commands', value: '**a!cm** | Creative Managers (manage_messages permission) \n**a!mute** | mutes member \n**a!unmute** | unmutes a member'},
                 { name: 'Music Commands (hydra)', value: '**p!play {song name}** | plays your song ( only work with the music role \n'}            )
             .setColor('#00FFF3')
