@@ -21,10 +21,10 @@ bot.on("guildMemberAdd", member => {
     welcomeChannel.send (`user: ${member} has entered the APK discord`)
 })
 
-//bot.on("guildMemberRemove", member => {
-  //  const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'welcome')
-  //  welcomeChannel.send (`user: ${member} has Left the APK discord`)
-//})
+bot.on("guildMemberRemove", member => {
+   const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'welcome')
+   welcomeChannel.send (`user: ${member} has Left the APK discord`)
+})
 
 
 require("./util/eventHandler")(bot)
@@ -57,7 +57,7 @@ bot.on("message", async message => {
     let prefix = botsettings.prefix;
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0].toLowerCase();
-    //let args = messageArray.slice(1);
+    //let args(1) = messageArray.slice(1);
     let args = message.content.substring(message.content.indexOf(' ')+1);
 
     if(!message.content.startsWith(prefix)) return;
