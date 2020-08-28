@@ -17,12 +17,12 @@ bot.GiveawaysManager = new GiveawaysManager(bot, {
 });
 
 bot.on("guildMemberAdd", member => {
-    const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'welcome')
+    const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'moderation')
     welcomeChannel.send (`user: ${member} has entered the APK discord`)
 })
 
 bot.on("guildMemberRemove", member => {
-   const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'welcome')
+   const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'moderation')
    welcomeChannel.send (`user: ${member} has Left the APK discord`)
 })
 
@@ -93,7 +93,7 @@ bot.on("messageReactionAdd", async (reaction, user) => {
     if(reaction.message.channel.id === "743069846685614141"){
       if (reaction.emoji.name === '✅'){
           await reaction.message.guild.members.cache.get(user.id).roles.add('743589337945604196')
-          const welcomeChannel = reaction.message.guild.channels.cache.find(channel => channel.name === 'welcome')
+          const welcomeChannel = reaction.message.guild.channels.cache.find(channel => channel.name === 'moderation')
          welcomeChannel.send(` user: ${user} has verified `)
       }  
     }
