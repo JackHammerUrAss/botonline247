@@ -18,12 +18,12 @@ bot.GiveawaysManager = new GiveawaysManager(bot, {
 
 bot.on("guildMemberAdd", member => {
     const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'moderation')
-    welcomeChannel.send(`user: ${member} has entered the APK discord`)
+    welcomeChannel.send(`user: ${member} has entered the discord`)
 })
 
 bot.on("guildMemberRemove", member => {
    const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'moderation')
-   welcomeChannel.send(`user: ${member} has Left the APK discord`)
+   welcomeChannel.send(`user: ${member} has Left the discord`)
 })
 
 
