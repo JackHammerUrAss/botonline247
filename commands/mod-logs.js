@@ -9,3 +9,11 @@ module.exports.run = (client) => {
         console.log(content)
     })
 }
+
+module.exports.config = {
+    name: "logging",
+    description: "",
+    usage: "?",
+    accessableby: "Members",
+    aliases: ['']
+}
