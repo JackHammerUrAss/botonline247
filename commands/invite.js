@@ -5,15 +5,21 @@ const usedCommand = new Set()
 
 module.exports.run = async (bot, message, args) => {
     if(usedCommand.has(message.author.id)){
-        message.reply('no spamming please...')
+        message.reply('No spamming please')
     } else {
-        message.reply('https://discord.com/api/oauth2/authorize?client_id=742517502839619625&permissions=2147483639&scope=bot')
+        const embed = new Discord.MessageEmbed()
+        .setTitle('This is the invite link')
+        .setDescription('*This command will be on hold for now!*')
+        .setFooter('APK', 'https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
+        .setTimestamp()
+        
+        message.channel.send(embed);
         
         
         usedCommand.add(message.author.id);
         setTimeout(() => {
             usedCommand.delete(message.author.id);
-        }, 60000); //You can set the ammount of the cooldown here! Its Formated to Miliseconds.
+        }, 5000); //You can set the ammount of the cooldown here! Its Formated to Miliseconds.
     }
 }
 
