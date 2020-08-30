@@ -2,7 +2,12 @@ const Discord = require('discord.js');
 const botsettings = require('./botsettings.json');
 const bot = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
 bot.botsettings = botsettings; 
+
+const modLogs = require('./mod-logs')
+
+
 const {GiveawaysManager} = require('discord-giveaways');
+
 
 bot.GiveawaysManager = new GiveawaysManager(bot, {
     storage: "./giveaways.json",
