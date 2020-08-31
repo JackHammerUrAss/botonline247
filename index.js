@@ -46,7 +46,7 @@ bot.on("message", async message => {
     let prefix = botsettings.prefix;
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0].toLowerCase();
-    //let args(1) = messageArray.slice(1);
+    let args1 = messageArray.slice(1);
     let args = message.content.substring(message.content.indexOf(' ')+1);
 
     if(!message.content.startsWith(prefix)) return;
@@ -111,7 +111,7 @@ bot.on("message", async message => {
 
     if (cmd === 'a!announce'){
         let pollChannel = message.mentions.channels.first();
-        let pollDescription = args.slice(1).join(' ');
+        let pollDescription = args1.slice(1).join(' ');
 
         let embedPoll = new Discord.MessageEmbed()
         .setTitle('**ANOUNCEMENT**')
