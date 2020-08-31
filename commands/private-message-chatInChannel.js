@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
     if(usedCommand.has(message.author.id)){
         message.reply('You cannot use the command beacuse of the cooldown.')
     } else {
-        message.reply('i have send you a DM!')
+        message.reply('type `support` and il send you a DM!')
         
         
         usedCommand.add(message.author.id);
@@ -19,9 +19,9 @@ module.exports.run = async (bot, message, args) => {
 
 
 module.exports.config = {
-    name: "support",
+    name: "a!support",
     description: "support message send",
-    usage: 'support',
+    usage: 'a!support',
     accessableby: "Members",
     aliases: []
 }
