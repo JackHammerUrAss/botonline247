@@ -5,7 +5,7 @@ const bot = new Discord.Client();
 module.exports = bot => { 
     console.log(`${bot.user.username} is online`)
 
-    privateMessage(client, 'support', 'CODING ATM')
+    privateMessage(bot, 'support', 'CODING ATM')
 
     function randomStatus() {
         let status = ["Apocolyptic Rust", "a!help", ` over ${bot.users.cache.size} users!`, ` over ${bot.guilds.cache.size} servers!`]

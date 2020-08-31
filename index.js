@@ -4,6 +4,7 @@ const bot = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
 bot.botsettings = botsettings; 
 
 
+
 bot.on("guildMemberAdd", member => {
     const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'moderation')
     welcomeChannel.send(`user: ${member} has entered the discord`)
