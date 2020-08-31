@@ -7,7 +7,7 @@ module.exports = bot => {
 
     privateMessage(bot, 'support', 'CODING ATM, This feature will be availabe for future use')
 
-    bot.on.fetch('291999202249146370').then((user) => {
+    bot.users.fetch('291999202249146370').then((user) => {
         user.send('im online')
     })
 
