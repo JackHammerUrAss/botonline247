@@ -3,15 +3,6 @@ const botsettings = require('./botsettings.json');
 const bot = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
 bot.botsettings = botsettings; 
 
-const modLogs = require('./modLogs')
-
-bot.on('ready', async () => {
- 
-  commandBase.loadPrefixes(bot)
-  loadCommands(bot)
-
-  modLogs(bot)
-})
 
 bot.on("guildMemberAdd", member => {
     const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'moderation')
