@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const botsettings = require('./botsettings.json');
 const bot = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
-bot.botsettings = botsettings; 
 
 
 bot.on("guildMemberAdd", member => {
