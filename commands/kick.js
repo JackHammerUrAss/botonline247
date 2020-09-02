@@ -10,7 +10,8 @@ module.exports.run = async (bot, message, args) => {
         try {
             await member.kick();
             console.log('Kicked');
-            message.channel.send(`${member}, Kicked!`)
+            const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'moderation')
+            message.welcomeChannel.send(`${member}, Kicked!`)
         }
             catch(err) {
             console.log(err);
