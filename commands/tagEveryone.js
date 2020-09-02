@@ -21,5 +21,5 @@ module.exports.config = {
     description: "sends a link",
     usage: "a!te",
     accessableby: "Creative Managers",
-    aliases: ['tagAll']
+    aliases: ['tagAll', 'ta']
 }
