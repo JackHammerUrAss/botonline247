@@ -25,3 +25,11 @@ module.exports.run = async (bot, message, args) => {
         reportshannel.send(reportEmbed)
         return;
     }}
+
+    module.exports.config = {
+        name: "test",
+        description: "",
+        usage: "a!test",
+        accessableby: "Moderators",
+        aliases: []
+    }
