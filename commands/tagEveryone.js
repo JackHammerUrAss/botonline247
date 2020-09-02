@@ -8,6 +8,8 @@ module.exports.run = async (bot, message, args) => {
      else {
         const everyoneChannel = message.mentions.channels.first();
         everyoneChannel.send('@everyone')
+        const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'moderation')
+        welcomeChannel.send(`user: ${member} has tagges everyone in ${everyoneChannel}`)
 
     }
 
