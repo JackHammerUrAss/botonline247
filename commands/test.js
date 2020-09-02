@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-
+const botsettings = require('./botsettings.json');
 module.exports.run = async (bot, message, args) => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return
