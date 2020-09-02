@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
     if(!message.member.hasPermission('ADMINISTRATOR'))
         message.channel.send('you dont have permission to use this command');
      else {
-        message.reply('@everyone')
+        message.channel.send('@everyone')
 
     }
 
