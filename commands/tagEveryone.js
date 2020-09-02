@@ -17,9 +17,9 @@ module.exports.run = async (bot, message, args) => {
 
 
 module.exports.config = {
-    name: "Creative Manager",
+    name: "tag everyone",
     description: "sends a link",
-    usage: "a!cm",
+    usage: "a!te",
     accessableby: "Creative Managers",
-    aliases: ['cm']
+    aliases: ['tagAll']
 }
