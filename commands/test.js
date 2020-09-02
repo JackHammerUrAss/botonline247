@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const botsettings = require('./botsettings.json');
+
 module.exports.run = async (bot, message, args) => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return
@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
 
-    if(cmd ===  `${prefix}test`){
+    if(cmd ===  `a!test`){
 
 
         let rUser = message.guild.member(message.mentions.user.first() || message.guild.members.get(args[0]));
