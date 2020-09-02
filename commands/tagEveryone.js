@@ -1,13 +1,14 @@
 const Discord = require("discord.js")
 const botconfig = require("../botsettings.json");
-
+const everyoneChannel = message.mentions.channels.first();
 const usedCommand = new Set()
 
 module.exports.run = async (bot, message, args) => {
     if(!message.member.hasPermission('ADMINISTRATOR'))
         message.channel.send('you dont have permission to use this command');
      else {
-        message.channel.send('@everyone')
+        if(!everyoneChannel) return message.channel.send('Please provide a channel');
+        everyoneChannel.send('@everyone')
 
     }
 

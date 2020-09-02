@@ -1,6 +1,5 @@
 const Discord = require("discord.js")
 const botconfig = require("../botsettings.json");
-
 const usedCommand = new Set()
 
 module.exports.run = async (bot, message, args) => {
@@ -8,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
         message.reply('You cannot use the command beacuse of the cooldown.')
     } else {
         message.reply('Bot is Online!')
-        
+      
         
         usedCommand.add(message.author.id);
         setTimeout(() => {
