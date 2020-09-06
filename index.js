@@ -83,7 +83,7 @@ bot.on("messageReactionAdd", async (reaction, user) => {
           const embed = new Discord.MessageEmbed()
           .setTitle('A new user has verified!')
           .setDescription(`user ${user} has verified `)
-          .setFooter('APK',  message.author.displayAvatarURL())
+          .setFooter('APK',  bot.user.displayAvatarURL())
           .setTimestamp()
           welcomeChannel.send(embed);
       }  
