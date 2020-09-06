@@ -6,7 +6,7 @@ const bot = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
 bot.on("guildMemberAdd", member, user => {
     const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'moderation')
     const embed = new Discord.MessageEmbed()
-          .setTitle('A User has joined the discord')
+          .setTitle('A New User joined the discord')
           .setDescription(`user ${user} Joined `)
           .setFooter('APK',  bot.user.displayAvatarURL())
           .setTimestamp()
