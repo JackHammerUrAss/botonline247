@@ -53,7 +53,6 @@ bot.on("message", async message => {
     if(cmd === `${prefix}tj`){
         let embed = new Discord.MessageEmbed()
         .setTitle('**WELCOME TO APOCOLYPTIC KNIGHTS**', 'https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
-        .setURL('https://dolfinroemer.wixsite.com/apocolyptic-knights')
         .setAuthor('Welcome!', 'https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Tick_Mark_Dark-512.png')
         .setColor('FFE8E8')
         .addFields(
@@ -83,9 +82,8 @@ bot.on("messageReactionAdd", async (reaction, user) => {
           const welcomeChannel = reaction.message.guild.channels.cache.find(channel => channel.name === 'moderation')
           const embed = new Discord.MessageEmbed()
           .setTitle('A new user has verified!')
-          .setAuthor(`${message.author.name} Info`, message.author.displayAvatarURL())
           .setDescription(`user ${user} has verified `)
-          .setFooter('APK', bot.user.displayAvatarURL())
+          .setFooter('APK',  message.author.displayAvatarURL())
           .setTimestamp()
           welcomeChannel.send(embed);
       }  
