@@ -83,8 +83,9 @@ bot.on("messageReactionAdd", async (reaction, user) => {
           const welcomeChannel = reaction.message.guild.channels.cache.find(channel => channel.name === 'moderation')
           const embed = new Discord.MessageEmbed()
           .setTitle('A new user has verified!')
+          .setAuthor(`${message.author.name} Info`, message.author.displayAvatarURL())
           .setDescription(`user ${user} has verified `)
-          .setFooter('TA', bot.user.displayAvatarURL())
+          .setFooter('APK', bot.user.displayAvatarURL())
           .setTimestamp()
           welcomeChannel.send(embed);
       }  
