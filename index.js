@@ -5,12 +5,22 @@ const bot = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
 
 bot.on("guildMemberAdd", member => {
     const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'moderation')
-    welcomeChannel.send(`user: ${member} has entered the discord`)
+    const embed = new Discord.MessageEmbed()
+          .setTitle('A User has joined the discord')
+          .setDescription(`user ${user} Joined `)
+          .setFooter('APK',  bot.user.displayAvatarURL())
+          .setTimestamp()
+    welcomeChannel.send(embed)
 })
 
 bot.on("guildMemberRemove", member => {
    const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'moderation')
-   welcomeChannel.send(`user: ${member} has Left the discord`)
+   const embed = new Discord.MessageEmbed()
+          .setTitle('A User has left the Discord')
+          .setDescription(`user ${user} has Left `)
+          .setFooter('APK',  bot.user.displayAvatarURL())
+          .setTimestamp()
+   welcomeChannel.send(embed)
 })
 
 
