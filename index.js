@@ -3,7 +3,7 @@ const botsettings = require('./botsettings.json');
 const bot = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
 
 
-bot.on("guildMemberAdd", member => {
+bot.on("guildMemberAdd", member, user => {
     const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'moderation')
     const embed = new Discord.MessageEmbed()
           .setTitle('A User has joined the discord')
@@ -13,7 +13,7 @@ bot.on("guildMemberAdd", member => {
     welcomeChannel.send(embed)
 })
 
-bot.on("guildMemberRemove", member => {
+bot.on("guildMemberRemove", member, user => {
    const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'moderation')
    const embed = new Discord.MessageEmbed()
           .setTitle('A User has left the Discord')
