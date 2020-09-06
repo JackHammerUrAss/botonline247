@@ -3,21 +3,21 @@ const botsettings = require('./botsettings.json');
 const bot = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
 
 
-bot.on("guildMemberAdd", member, user => {
+bot.on("guildMemberAdd", member => {
     const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'moderation')
     const embed = new Discord.MessageEmbed()
           .setTitle('A New User joined the discord')
-          .setDescription(`user ${user} Joined `)
+          .setDescription(`user ${member} Joined `)
           .setFooter('APK',  bot.user.displayAvatarURL())
           .setTimestamp()
     welcomeChannel.send(embed)
 })
 
-bot.on("guildMemberRemove", member, user => {
+bot.on("guildMemberRemove", member => {
    const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'moderation')
    const embed = new Discord.MessageEmbed()
           .setTitle('A User has left the Discord')
-          .setDescription(`user ${user} has Left `)
+          .setDescription(`user ${member} has Left `)
           .setFooter('APK',  bot.user.displayAvatarURL())
           .setTimestamp()
    welcomeChannel.send(embed)
