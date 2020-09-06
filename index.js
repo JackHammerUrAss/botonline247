@@ -81,7 +81,11 @@ bot.on("messageReactionAdd", async (reaction, user) => {
       if (reaction.emoji.name === '✅'){
           await reaction.message.guild.members.cache.get(user.id).roles.add('743589337945604196')
           const welcomeChannel = reaction.message.guild.channels.cache.find(channel => channel.name === 'moderation')
-         welcomeChannel.send(` user: ${user} has verified `)
+          const embed = new Discord.MessageEmbed()
+          .setTitle(`user ${user} has verified!`)
+          .setFooter('TA', bot.user.displayAvatarURL())
+          .setTimestamp()
+          welcomeChannel.send(embed);
       }  
     }
 })
