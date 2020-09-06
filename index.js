@@ -82,7 +82,8 @@ bot.on("messageReactionAdd", async (reaction, user) => {
           await reaction.message.guild.members.cache.get(user.id).roles.add('743589337945604196')
           const welcomeChannel = reaction.message.guild.channels.cache.find(channel => channel.name === 'moderation')
           const embed = new Discord.MessageEmbed()
-          .setTitle(`user ${user} has verified!`)
+          .setTitle('A new user has verified!')
+          .setDescription(`user ${user} has verified `)
           .setFooter('TA', bot.user.displayAvatarURL())
           .setTimestamp()
           welcomeChannel.send(embed);
