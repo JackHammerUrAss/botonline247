@@ -73,8 +73,7 @@ bot.on("message", async message => {
         .setTimestamp()
          let msgEmbed = await message.channel.send(embed)
         msgEmbed.react('✅')
-     
-
+        //• No Spam in Text Chat (or) Voice Chat \n • Please do not use all CAPS...we can read your message just fine without it\n • No harassment, racism or hate speech of any kind...it will not be tolerated\n • Respect Admins as well as fellow discord users\n • No linking to other discord channels or advertising of any kind to any members\n • No pornography, violent or disturbing links, pictures or videos\n • Dont tell admins how to admin\n • No channel hopping. Which is joining multiple channels in a short time\n • Be respectful of others in voice & text chat\n • Keep text chats ON topic. Example: Suggestions in #suggestions chat\n • Admins reserve the right to mute/ban anyone as they see fit\n
     }
 
 })
@@ -89,7 +88,7 @@ bot.on("messageReactionAdd", async (reaction, user) => {
     if(reaction.message.channel.id === "743069846685614141"){
       if (reaction.emoji.name === '✅'){
           await reaction.message.guild.members.cache.get(user.id).roles.add('743589337945604196')
-          const welcomeChannel = reaction.message.guild.channels.cache.find(channel => channel.name === 'moderation')
+          const welcomeChannel = reaction.message.guild.channels.cache.find(channel => channel.id === '743829943221354506')
           const embed = new Discord.MessageEmbed()
           .setTitle('A new user has verified!')
           .setDescription(`user ${user} has verified `)
