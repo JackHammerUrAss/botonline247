@@ -10,6 +10,8 @@ bot.on("guildMemberAdd", member => {
           .setDescription(`user ${member} Joined `)
           .setFooter('APK',  bot.user.displayAvatarURL())
           .setTimestamp()
+          .setColor('#3FF392')
+          if (!welcomeChannel) return;
     welcomeChannel.send(embed)
 })
 
@@ -20,6 +22,8 @@ bot.on("guildMemberRemove", member => {
           .setDescription(`user ${member} has Left `)
           .setFooter('APK',  bot.user.displayAvatarURL())
           .setTimestamp()
+          .setColor('#70C195 ')
+          if (!welcomeChannel) return;
    welcomeChannel.send(embed)
 })
 
@@ -62,14 +66,14 @@ bot.on("message", async message => {
     if(commandfile) commandfile.run(bot,message,args)
     if(cmd === `${prefix}tj`){
         let embed = new Discord.MessageEmbed()
-        .setTitle('**WELCOME TO APOCOLYPTIC KNIGHTS**', 'https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
-        .setAuthor('Welcome!', 'https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Tick_Mark_Dark-512.png')
+        .setTitle('Welcome to APK, Verification Embed')
+        .setAuthor('Welcome!', 'https://www.clipartmax.com/png/middle/203-2031800_tick-purple-400px-check-mark-in-circle-icon.png')
         .setColor('FFE8E8')
         .addFields(
-            {name: '**RULES**',value: '• No Spam in Text Chat (or) Voice Chat \n • Please do not use all CAPS...we can read your message just fine without it\n • No harassment, racism or hate speech of any kind...it will not be tolerated\n • Respect Admins as well as fellow discord users\n • No linking to other discord channels or advertising of any kind to any members\n • No pornography, violent or disturbing links, pictures or videos\n • Dont tell admins how to admin\n • No channel hopping. Which is joining multiple channels in a short time\n • Be respectful of others in voice & text chat\n • Keep text chats ON topic. Example: Suggestions in #suggestions chat\n • Admins reserve the right to mute/ban anyone as they see fit\n'},
-            {name: '**APPLY**', value: 'to apply please check our website, \n https://dolfinroemer.wixsite.com/apocolyptic-knights\n also linked in the blue text xD'}
+            {name: '**RULES**',value: "----------------------\n __**APK Community**__\n\nThe Official APK Discord has quite a few members, so to keep the server safe and happy, there needs to be a set of rules.\n\n•**Discord ToS**\n*You must follow all of Discord's Terms of Service and Community Guidelines. If you haven't already, make sure to*\n*read them here:*\nhttps://discord.com/terms\nhttps://discord.com/guidelines\n\n**1)**\nDisruptive behavior is not tolerated. This includes spam, slurs, harassment, witch-hunting, and impersonation.\n   :This rule applies to both text and voice channels.\n\n**2)**\nBe cautious introducing discussions pertaining to gender, sexuality, religion, politics or race.\n   : These topics can quickly devolve into heated arguments, and generally do not belong on this server.\n\n**3)**\nNSFW (Not Safe For Work) content is prohibited. This includes usernames, nicknames, statuses, and profile pictures.\n   :If you have to ask if something is NSFW, the answer is generally 'yes'.\n\n**4)**\n Be mindful of channels and their uses. Please read the channel descriptions and (if applicable) pins before posting.\n   : Looking For Group (LFG) requests should be restricted.\n\n**5)**\nThis is an English/dutch-speaking server. Users speaking in languages other than English/dutch will be asked to stop.\n   :Phrases or exclamations in other languages are fine, but full conversations are not.\n**6)**\nCertain types of content are not permitted. These are automatically removed by our bots, and may incur restrictions.\n   :This includes external Discord invites, scam links, slurs, and other disallowed content.\n\n**7)**\n Discussion of piracy, cheating, or other illegal activities is strictly prohibited.\n   :This includes asking about cracked copies of games, how to download cheat software, etc.\n\n**8)**\nFinal verdict and rule interpretation is at staff discretion. If you are asked by a moderator to stop doing something, stop.\n\nAt Last if this bot has been created by <@JacquesRRD#3034> all credits remain with the bots creator\n\nMake sure to enjoy your time and have a great day!"},
+            {name: '**APPLY**', value: 'to apply please check our website, \n https://dolfinroemer.wixsite.com/apocolyptic-knights\n also linked in the blue text.'}
         )
-        .setFooter('please react to this Embed to verify', 'https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
+        .setFooter('please react to this Embed to verify', bot.user.displayAvatarURL())
         .setTimestamp()
          let msgEmbed = await message.channel.send(embed)
         msgEmbed.react('✅')
