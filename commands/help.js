@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
                 { name: 'Staff Commands', value: '**a!cm** | Creative Managers (manage_messages permission) \n**a!mute** | mutes member \n**a!unmute** | unmutes a member'},
                 { name: 'Music Commands (hydra)', value: '**p!play {song name}** | plays your song ( only work with the music role \n'}            )
             .setColor('#00FFF3')
-            .setFooter('APK','https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
+            .setFooter('APK', bot.user.displayAvatarURL())
             
         message.channel.send(embed);
     }
