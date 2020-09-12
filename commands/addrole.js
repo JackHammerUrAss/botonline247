@@ -6,7 +6,7 @@ const usedCommand = new Set()
 module.exports.run = async (bot, message, args) => {
         const embed = new Discord.MessageEmbed()
         .setTitle('ADDRole Command')
-        .setDescription('diffrent variables for the folllow command (a!add{variable} so example is a!addTeam \n*Team* \n*Verified*')
+        .setDescription('**diffrent variables for the folllow command** \n(a!add{variable} so example is a!addTeam \n\n*Team* \n*Verified*')
         .setFooter('TA', bot.user.displayAvatarURL())
         .setTimestamp()
         
