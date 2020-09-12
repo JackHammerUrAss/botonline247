@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
 }
 
 module.exports.config = {
-    name: "addrole",
+    name: "addrolea",
     description: "adds member role(default;member), to use this command simply type ```addrole'availabe role here'```, the availabe roles are linked in the pinged message in the staff channel",
     usage: "z!addrole",
     accessableby: "Members",
