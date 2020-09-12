@@ -1,29 +1,12 @@
-const { DiscordAPIError } = require("discord.js");
-
-module.exports.run = async (bot, message, args) => {
-    if(!message.member.hasPermission('ADMINISTRATOR', 'MANAGE_ROLES'))
-    message.channel.send('you dont have permission to use this command');
- else {
-    let epicRole = message.mentions.members.cache.first() || message.guild.members.cache.find(m => m.user.tag === args[0] || message.guild.members.cache.get(args[0]))
-    if (!epicRole) return message.channel.send("Please provide a user to add a role to.")
-    let role = message.guild.roles.cache.find(r => r.name == args[1]) || message.guild.roles.cache.find(r => r.id == args[1]) || message.mentions.roles.cache.first()
-    if(!role) return message.channel.send("Please provide a role to add to said user.")
-    let reason = args.slice(2).join(" ")
-    if(!reason) return message.channel.send("Please provide a reason/argument")
-    
-    if(!message.guild.me.hasPermission('ADMINISTRATOR', 'MANAGE_ROLES')) return  message.channel.send('you dont have permission to perform');
-
-    if(epicRole.roles.has(role.id)) {
-        return message.channel.send(`${epicRole.displayName}, already has provided role`)
-    } else {
-        await epicRole.role.add(role.id).catch(e => console.log(e.message))
-        message.channel.send(`The role, ${role.name}, has been added to ${epicRole.displayName}.`)
-    }
-
-    const member = message.mentions.members.first();
-
-
-}}
+const Discord = require('discord.js');
+module.exports.run = async (client, message, args) => {
+    if(!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send('You dont have permission to use this command /:');
+    const user = message.mentions.member.first();
+    if(!user) return message.channel.send('Please specify a user you would like to give a role to')
+    const role = message.guild.roles.find(r => r.name === args.slice(1).join(" "));
+    if(!role) return message.channel.send('Please specify a role you like to give to the Mentioned user')
+    await user.addRole(role.id), message.channel.send(`${user} now has the ${role} role`)
+}
 
 module.exports.config = {
     name: "addrole",
