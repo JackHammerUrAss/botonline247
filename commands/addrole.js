@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
     if(!message.member.hasPermission('ADMINISTRATOR', 'MANAGE_ROLES'))
     message.channel.send('you dont have permission to use this command');
  else {
-    let epicRole = message.guild.roles.cache.get('748914648673157200');
+    let epicRole = message.mentions.members.first() || message.guild.members.find(m => m.user.tag === args[0] || message.guild.members.get(args[0]))
     if (!epicRole) return message.channel.send("Please provide a user to add a role to.")
     let role = message.guild.roles.find(r => r.name == args[1]) || message.guild.roles.find(r => r.id == args[1]) || message.mentions.roles.first()
     if(!role) return message.channel.send("Please provide a role to add to said user.")
