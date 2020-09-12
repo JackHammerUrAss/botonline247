@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
     if(epicRole.roles.has(role.id)) {
         return message.channel.send(`${epicRole.displayName}, already has provided role`)
     } else {
-        await epicRole.addrole(role.id).catch(e => console.log(e.message))
+        await epicRole.role.add(role.id).catch(e => console.log(e.message))
         message.channel.send(`The role, ${role.name}, has been added to ${epicRole.displayName}.`)
     }
 
