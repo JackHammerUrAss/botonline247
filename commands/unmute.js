@@ -11,7 +11,16 @@ module.exports.run = async (bot, message, args) => {
         if(mutedRole) {
             member.roles.remove(mutedRole);
             member.roles.add(verifiedRole);
-            message.channel.send("User was Successfully Unmuted.");
+            message.channel.send("User was Successfully Unmuted.")
+            const welcomeChannel = message.guild.channels.cache.find(channel => channel.id === '743829943221354506')
+            const embed = new Discord.MessageEmbed()
+                  .setTitle('A Member has been Unmuted!')
+                  .setDescription(`user \`${member}\`has been Unmuted by \`${message.author.tag}\`! `)
+                  .setFooter('APK',  bot.user.displayAvatarURL())
+                  .setTimestamp()
+                  .setColor('#F75E78')
+                  if (!welcomeChannel) return;
+            welcomeChannel.send(embed)
         }
 }
 
