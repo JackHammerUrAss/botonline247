@@ -1,18 +1,15 @@
-const Discord = require('discord.js');
-module.exports.run = async (client, message, args) => {
-    if(!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send('You dont have permission to use this command /:');
-    const user = message.mentions.members.first();
-    if(!user) return message.channel.send('Please specify a user you would like to give a role to')
-    const role = message.guild.roles.fetch.find(roles => roles.name === args.slice(1).join(" "));
-    if(!role) return message.channel.send('Please specify a role you like to give to the Mentioned user')
-    await user.role.add(role), message.channel.send(`${user} now has the ${role} role`)
+module.exports.run = async (bot, message, args) => {
+    let epicRole = message.guild.roles.cache.get('748914648673157200');
+    const member = message.mentions.members.first();
+
+    member.roles.add(epicRole);
+    message.channel.send('Role Added')
 }
 
 module.exports.config = {
-    name: "addrole",
+    name: "addrole1",
     description: "adds member role(default;member), to use this command simply type ```addrole'availabe role here'```, the availabe roles are linked in the pinged message in the staff channel",
-    usage: "z!addrole",
+    usage: "-addrole1",
     accessableby: "Members",
-    aliases: ["ar"]
+    aliases: []
 }
-
