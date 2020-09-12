@@ -1,15 +1,28 @@
-module.exports.run = async (bot, message, args) => {
-    let epicRole = message.guild.roles.cache.get('748914648673157200');
-    const member = message.mentions.members.first();
+const Discord = require("discord.js")
+const botconfig = require("../botsettings.json");
 
-    member.roles.add(epicRole);
-    message.channel.send('Role Added')
-}
+const usedCommand = new Set()
+
+module.exports.run = async (bot, message, args) => {
+        const embed = new Discord.MessageEmbed()
+        .setTitle('ADDRole Command')
+        .setDescription('diffrent variables for the folllow command (a!add{variable} so example is a!addTeam \n*Team* \n*Verified*')
+        .setFooter('TA', bot.user.displayAvatarURL())
+        .setTimestamp()
+        
+        message.channel.send(embed);
+     
+    }
+
+      
+    
+
+
 
 module.exports.config = {
-    name: "addrole1",
-    description: "adds member role(default;member), to use this command simply type ```addrole'availabe role here'```, the availabe roles are linked in the pinged message in the staff channel",
-    usage: "-addrole1",
+    name: "online",
+    description: "checks if the bot is online",
+    usage: "a!online",
     accessableby: "Members",
     aliases: []
 }
