@@ -14,8 +14,9 @@ module.exports.run = async (bot, message, args) => {
             member.roles.add(mutedRole);
             member.roles.remove(verifiedRole);
             message.channel.send("User was Successfully muted.");
-            const welcomeChannel = message.guild.channels.cache.find(channel => channel.name === 'welcome')
-            welcomeChannel.send(` user: ${user} has muted someone `)
+            const welcomeChannel = message.guild.channels.cache.find(channel => channel.id === '743829943221354506')
+            if (!welcomeChannel) return;
+            welcomeChannel.send(` someone has been muted `)
         }
 }
 
@@ -24,5 +25,5 @@ module.exports.config = {
     description: "",
     usage: "a!mute",
     accessableby: "Moderators",
-    aliases: []
+    aliases: ['m']
 }
