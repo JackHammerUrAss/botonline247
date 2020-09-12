@@ -15,7 +15,6 @@ module.exports.run = async (bot, message, args) => {
             member.roles.remove(verifiedRole);
             message.channel.send("User was Successfully muted.");
             const welcomeChannel = message.guild.channels.cache.find(channel => channel.id === '743829943221354506')
-            const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'moderation')
             const embed = new Discord.MessageEmbed()
                   .setTitle('A Member has been muted!')
                   .setDescription(`user \`${member}\`has been muted by \`${message.author.tag}\`! `)
