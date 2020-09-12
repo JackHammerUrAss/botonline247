@@ -20,9 +20,9 @@ module.exports.run = async (bot, message, args) => {
 
 
 module.exports.config = {
-    name: "online",
-    description: "checks if the bot is online",
-    usage: "a!online",
+    name: "addrole",
+    description: "sends possible variates",
+    usage: "a!addrole",
     accessableby: "Members",
     aliases: []
 }
