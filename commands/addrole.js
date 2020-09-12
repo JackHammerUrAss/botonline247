@@ -3,7 +3,7 @@ module.exports.run = async (client, message, args) => {
     if(!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send('You dont have permission to use this command /:');
     const user = message.mentions.members.first();
     if(!user) return message.channel.send('Please specify a user you would like to give a role to')
-    const role = message.guild.roles.fetch.find(roles => roles.name === 'role_name')
+    const role = message.guild.roles.fetch.find(roles => roles.name === args.slice(1).join(" "));
     if(!role) return message.channel.send('Please specify a role you like to give to the Mentioned user')
     await user.role.add(role), message.channel.send(`${user} now has the ${role} role`)
 }
