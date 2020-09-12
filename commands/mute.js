@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
             const welcomeChannel = message.guild.channels.cache.find(channel => channel.id === '743829943221354506')
             const embed = new Discord.MessageEmbed()
                   .setTitle('A Member has been muted!')
-                  .setDescription(`user \`${member.tag}\`has been muted by \`${message.author.tag}\`! `)
+                  .setDescription(`user \`${member}\`has been muted by \`${message.author.tag}\`! `)
                   .setFooter('APK',  bot.user.displayAvatarURL())
                   .setTimestamp()
                   .setColor('#F75EC4')
