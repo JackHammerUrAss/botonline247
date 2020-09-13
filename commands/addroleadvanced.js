@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     if(!user) return message.channel.send('Please specify a user you would like to give a role to')
     const role = message.guild.roles.cache.find(role => role.name === 'role name');
     if(!role) return message.channel.send('Please specify a role you like to give to the Mentioned user')
-    await user.roles.add(role);
+     user.roles.add(role);
     message.channel.send(`${user} now has the ${role} role`)
 }
 
