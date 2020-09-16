@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
     const BotRole = member.roles.cache.has('742644657590370387')
 
     if(BotRole) {
-        message.channel.send('**well i could also just eliminate you**')
+        message.channel.send('**well i could also just eliminate you**\nᵖˡᵉᵃˢᵉ ᵒⁿˡʸ ᵘˢᵉ ᵗʰⁱˢ ᶠᵒʳ ⁱᵗˢ ᵃᶜᵗᵘᵃˡ ᵖᵘʳᵖᵒˢᵉ')
     } else {
 
     // all roles that wont be able to get muted
