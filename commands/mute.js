@@ -1,35 +1,54 @@
 
+
 const Discord = require("discord.js")
 const botconfig = require("../botsettings.json");
 
 
 module.exports.run = async (bot, message, args) => {
     if(!message.member.hasPermission(['MUTE_MEMBERS'])) return;
-    const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(x => x.user.username === args.slice(0).join(" ") || x.user.username === args[0])
-    if(member.hasPermission(['MUTE_MEMBERS']) && !message.member.hasPermission('MUTE_MEMBERS')) return;
+    const member = message.mentions.members.first(); 
+    if (!member) return message.channel.send('**z!hardmute <@!id> || @user **')
+    // all roles that wont be able to get muted
+    const botcoderRole = member.roles.cache.has('752930363587690526')
+    const starRole = member.roles.cache.has('752930356495253528')
 
+    if(botcoderRole || starRole) {
+        message.channel.send('This user could not be muted')
+    } else {
+    //botcoder role, can not be heavy muted
+    if(member.hasPermission(['MUTE_MEMBERS']) && !message.member.hasPermission('MUTE_MEMBERS')) return;
+        //all roles consts
         let mutedRole = message.guild.roles.cache.get('748304191738609804');
-        let verifiedRole = message.guild.roles.cache.get('743589337945604196');
-        if(mutedRole) {
+        let verifiedRole = message.guild.roles.cache.get('752930398853398620');
+        let communityRole = message.guild.roles.cache.get('752930399801442435');
+        let managementRole = message.guild.roles.cache.get('753650679372841091');
+
+       
+
+        if (mutedRole) {
+            //roles remove or add 
             member.roles.add(mutedRole);
+            member.roles.remove(communityRole);
             member.roles.remove(verifiedRole);
-            message.channel.send("User was Successfully muted.");
-            const welcomeChannel = message.guild.channels.cache.find(channel => channel.id === '743829943221354506')
+            member.roles.remove(managementRole);
+
+            message.channel.send("User was Successfully muted");
+
+           
+            const Moderation = message.guild.channels.cache.find(channel => channel.id === '743829943221354506')
             const embed = new Discord.MessageEmbed()
-                  .setTitle('A Member has been muted!')
-                  .setDescription(`user \`${member}\`has been muted by \`${message.author.tag}\`! `)
-                  .setFooter('APK',  bot.user.displayAvatarURL())
-                  .setTimestamp()
-                  .setColor('#F75EC4')
-                  if (!welcomeChannel) return;
-            welcomeChannel.send(embed)
-        }
+            .setTitle('A Member has been muted!')
+            .setDescription(`user \`${member}\` has been muted by \`${message.author.tag}\`! `)
+            .setFooter('APK',  bot.user.displayAvatarURL())
+            .setTimestamp()
+            Moderation.send(embed)
+        }}
 }
 
 module.exports.config = {
-    name: "mute",
+    name: "Prison",
     description: "",
-    usage: "a!mute",
+    usage: "a!prison",
     accessableby: "Moderators",
-    aliases: ['m']
+    aliases: ['lockuser', 'lu']
 }
