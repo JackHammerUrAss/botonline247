@@ -19,8 +19,7 @@ module.exports.run = async (bot, message, args) => {
     if(member.hasPermission(['MUTE_MEMBERS']) && !message.member.hasPermission('MUTE_MEMBERS')) return;
         //all roles consts
         let mutedRole = message.guild.roles.cache.get('748304191738609804');
-        let verifiedRole = message.guild.roles.cache.get('752930398853398620');
-        let communityRole = message.guild.roles.cache.get('752930399801442435');
+        let verifiedRole = message.guild.roles.cache.get('743589337945604196');
         let managementRole = message.guild.roles.cache.get('753650679372841091');
 
        
@@ -47,8 +46,8 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.config = {
     name: "Prison",
-    description: "",
-    usage: "a!prison",
+    description: " this will lock someone ",
+    usage: "!prison",
     accessableby: "Moderators",
-    aliases: ['lockuser', 'lu']
+    aliases: ['lockuser', 'lu', 'hm', 'hardmute', 'Hardmute', 'HM', 'HardMute', 'Lockuser', 'LockUser', 'LU', 'prison', 'prisonize']
 }
