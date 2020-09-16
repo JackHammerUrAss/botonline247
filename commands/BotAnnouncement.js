@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     const messageArray = message.content.split(' ');
     const cmd = messageArray[0];
 
-    if (cmd === '!poll'){
+    if (cmd === '!ba'){
         let pollChannel = message.mentions.channels.first();
         let pollDescription = message.content.substring(message.content.indexOf(' ')+1);
 
