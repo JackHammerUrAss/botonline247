@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
         let pollDescription = message.content.substring(message.content.indexOf(' ')+1);
 
         let embedPoll = new Discord.MessageEmbed()
-        .setTitle('POLL TIME')
+        .setTitle('New bot update!')
         .setDescription(pollDescription)
         .setColor('#FFE8E8')
         let msgEmbed = await pollChannel.send(embedPoll);
@@ -22,9 +22,9 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.config = {
-    name: "poll",
+    name: "botannounce",
     description: "makes a poll (a!poll channel text",
-    usage: "a!poll",
+    usage: "!botannounce",
     accessableby: "Members",
-    aliases: ['p']
+    aliases: ['ba', 'BA', 'Botannounce', 'BotAnnounce']
 }
