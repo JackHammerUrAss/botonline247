@@ -5,6 +5,7 @@ module.exports.run = async (bot, message, args) => {
     
     const messageArray = message.content.split(' ');
     const cmd = messageArray[0];
+    const args = messageArray.slice(1);
 
     if (cmd === '!ba'){
         let pollChannel = message.mentions.channels.first();
@@ -15,8 +16,7 @@ module.exports.run = async (bot, message, args) => {
         .setDescription(pollDescription)
         .setColor('#FFE8E8')
         let msgEmbed = await pollChannel.send(embedPoll);
-        await msgEmbed.react('✅')
-        await msgEmbed.react('❎')
+    
     }
 
 }
