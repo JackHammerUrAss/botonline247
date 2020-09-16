@@ -7,10 +7,17 @@ const botconfig = require("../botsettings.json");
 module.exports.run = async (bot, message, args) => {
     if(!message.member.hasPermission(['MUTE_MEMBERS'])) return;
     const member = message.mentions.members.first(); 
-    if (!member) return message.channel.send('**z!hardmute <@!id> || @user **')
+    if (!member) return message.channel.send('**!lockuser <@!id> || @user **')
+    // the actual bot himself
+    const BotRole = member.roles.cache.has('742644657590370387')
+
+    if(BotRole) {
+        message.channel.send('well i could eliminate you...')
+    } else {
+
     // all roles that wont be able to get muted
-    const botcoderRole = member.roles.cache.has('752930363587690526')
-    const starRole = member.roles.cache.has('752930356495253528')
+    const botcoderRole = member.roles.cache.has('742695341232488459')
+    const starRole = member.roles.cache.has('748302806301147156')
 
     if(botcoderRole || starRole) {
         message.channel.send('This user could not be muted')
@@ -20,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
         //all roles consts
         let mutedRole = message.guild.roles.cache.get('748304191738609804');
         let verifiedRole = message.guild.roles.cache.get('743589337945604196');
-        let managementRole = message.guild.roles.cache.get('753650679372841091');
+        let TeamRole = message.guild.roles.cache.get('748914648673157200');
 
        
 
@@ -29,7 +36,7 @@ module.exports.run = async (bot, message, args) => {
             member.roles.add(mutedRole);
             member.roles.remove(communityRole);
             member.roles.remove(verifiedRole);
-            member.roles.remove(managementRole);
+            member.roles.remove(TeamRole);
 
             message.channel.send("User was Successfully muted");
 
@@ -42,7 +49,7 @@ module.exports.run = async (bot, message, args) => {
             .setTimestamp()
             Moderation.send(embed)
         }}
-}
+}}
 
 module.exports.config = {
     name: "Prison",
