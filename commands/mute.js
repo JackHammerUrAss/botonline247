@@ -16,10 +16,10 @@ module.exports.run = async (bot, message, args) => {
     } else {
 
     // all roles that wont be able to get muted
-    const botcoderRole = member.roles.cache.has('742695341232488459')
+    const CTORole = member.roles.cache.has('742695341232488459')
     const starRole = member.roles.cache.has('748302806301147156')
 
-    if(botcoderRole || starRole) {
+    if(CTORole || starRole) {
         message.channel.send('This user could not be muted')
     } else {
     //botcoder role, can not be heavy muted
@@ -28,14 +28,22 @@ module.exports.run = async (bot, message, args) => {
         let mutedRole = message.guild.roles.cache.get('748304191738609804');
         let verifiedRole = message.guild.roles.cache.get('743589337945604196');
         let TeamRole = message.guild.roles.cache.get('748914648673157200');
-
-       
+        let botCoder = message.guikd.roles.cache.get('755863093271068733');
+        let ProgramManager = message.guikd.roles.cache.get('748674943838978079');
+        let ManagerTrainee = message.guikd.roles.cache.get('748674934296936471');
+        let Supervisor = message.guikd.roles.cache.get('748674942673092771');
+        let  Security = message.guikd.roles.cache.get('748675262769791047');
 
         if (mutedRole) {
             //roles remove or add 
             member.roles.add(mutedRole);
             member.roles.remove(verifiedRole);
             member.roles.remove(TeamRole);
+            member.roles.remove(botCoder);
+            member.roles.remove(ProgramManager);
+            member.roles.remove(ManagerTrainee);
+            member.roles.remove(Supervisor);
+            member.roles.remove(Security);
 
             message.channel.send("User was Successfully muted");
 
