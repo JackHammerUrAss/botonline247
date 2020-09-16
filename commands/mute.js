@@ -17,9 +17,11 @@ module.exports.run = async (bot, message, args) => {
 
     // all roles that wont be able to get muted
     const CTORole = member.roles.cache.has('742695341232488459')
+    const PRM = member.roles.cache.has('748675151888908320')
     const starRole = member.roles.cache.has('748302806301147156')
+    const CDC = member.roles.cache.has('747520388979753070')
 
-    if(CTORole || starRole) {
+    if(CTORole || starRole || PRM || CDC  ) {
         message.channel.send('This user could not be muted')
     } else {
     //botcoder role, can not be heavy muted
