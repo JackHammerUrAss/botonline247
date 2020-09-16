@@ -34,7 +34,6 @@ module.exports.run = async (bot, message, args) => {
         if (mutedRole) {
             //roles remove or add 
             member.roles.add(mutedRole);
-            member.roles.remove(communityRole);
             member.roles.remove(verifiedRole);
             member.roles.remove(TeamRole);
 
