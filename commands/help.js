@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
     //Normal usage of (prefix)help without any args. (Shows all of the commands and you should set the commands yourself)
     if(!helpArgs[0]) {
         var embed = new Discord.MessageEmbed()
-            .setAuthor(`Server ${guild.name}`)
+            .setAuthor(`Server Help`)
                 .setThumbnail('https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
                 .setDescription("APK commands in this server start with ```!```\n commands are used for moderators or members")
                 .addFields(
