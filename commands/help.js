@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
             .setColor('#00FFF3')
             .setFooter('APK', bot.user.displayAvatarURL())
             
-        message.channel.send(embed);
+        message.author.send(embed);
     }
 
     //Reads the moudle.exports.config (This line of code is on commands folder, each command will read automaticly) by the second argument (the command name) and shows the information of it.
@@ -49,9 +49,9 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.config = {
-    name: "2help",
+    name: "help",
     description: "",
-    usage: "a!help",
+    usage: "!help",
     accessableby: "Members",
-    aliases: []
+    aliases: ['h']
 }

@@ -5,7 +5,7 @@ const bot = new Discord.Client();
 module.exports = bot => { 
     console.log(`${bot.user.username} is online`)
 
-    privateMessage(bot, 'support', 'CODING ATM \nThis feature will be availabe for future use')
+    privateMessage(bot, 'help', embed )
 
     bot.users.fetch('291999202249146370').then((user) => {
         user.send('im online')
