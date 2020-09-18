@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
                 .setThumbnail('https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
                 .setDescription("APK commands in this server start with `!`\n commands are used for moderators or members")
                 .addFields(
-                    { name: '**Help & Support**', value: '[guides](https://google.com) \nCommands List \nRecent updates' , inline: true}, 
+                    { name: '**Help & Support**', value: '[guides](https://google.com) \n[Commands List](https://google.com) \n[Recent updates](https://google.com)' , inline: true}, 
                    )
             .setColor('#00FFF3')
             .setFooter('APK', bot.user.displayAvatarURL())
