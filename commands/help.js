@@ -44,7 +44,7 @@ module.exports.run = async (bot, message, args) => {
             `)
             .setColor('#00FFF3')
 
-        message.channel.send(embed);
+        message.Author.send(embed);
     }}
 }
 
