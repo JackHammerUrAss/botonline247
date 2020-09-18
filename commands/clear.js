@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     }
 
     if (!message.member.hasPermission("MANAGE_MESSAGES")) {
-        return message.reply("Missing Permissions!"), {timeout: 5000};
+        return message.reply("Missing Permissions!").then ,{timeout: 5000};
     }
 
     if (isNaN(args[0]) || parseInt(args[0]) <= 0) {
