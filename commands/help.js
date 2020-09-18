@@ -44,12 +44,12 @@ module.exports.run = async (bot, message, args) => {
             `)
             .setColor('#00FFF3')
 
-        message.Author.send(embed);
+        message.channel.send(embed);
     }}
 }
 
 module.exports.config = {
-    name: "help",
+    name: "2help",
     description: "",
     usage: "a!help",
     accessableby: "Members",
