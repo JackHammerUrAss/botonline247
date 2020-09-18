@@ -13,14 +13,12 @@ module.exports.run = async (bot, message, args) => {
     //Normal usage of (prefix)help without any args. (Shows all of the commands and you should set the commands yourself)
     if(!helpArgs[0]) {
         var embed = new Discord.MessageEmbed()
-            .setAuthor(`Here are the Avaible Commands to use:`)
+            .setAuthor(`Server ${guild.name}`)
                 .setThumbnail('https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
+                .setDescription("APK commands in this server start with ```!```\n commands are used for moderators or members")
                 .addFields(
-                { name: 'Prefix', value: '```a!```', inline: true},
-                { name: 'Basic Commands', value: '**a!invite** | sends the bot invite link \n **a!online** | Tells if the bot is online \n **a!website** | Sends the website link'},
-                { name: 'Voice Commands (only works when VM is installed)', value: '**v!voice setup** | sets up the voice channels ( admin command )\n**v!invite** | VM invite link \n**v!lock** | locks VC \n**v!unlock** | Unlocks VC \n**v!voice name <name>** | change the vc name \n**v!voice limit <limit>** \n**v!voice claim** | claim a vc \n**v!voice permit <@user>** | add a user to your vc \n**v!voice deny <@user>** | deny a user from joining your vc'},
-                { name: 'Staff Commands', value: '**a!cm** | Creative Managers (manage_messages permission) \n**a!mute** | mutes member \n**a!unmute** | unmutes a member'},
-                { name: 'Music Commands (hydra)', value: '**p!play {song name}** | plays your song ( only work with the music role \n'}            )
+                { name: '**Help & Support**', value: 'Guides \nCommands List \nRecent updates', inline: true},
+                   )
             .setColor('#00FFF3')
             .setFooter('APK', bot.user.displayAvatarURL())
             
