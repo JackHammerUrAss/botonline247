@@ -5,7 +5,7 @@ const botconfig = require("../botsettings.json");
 
 
 module.exports.run = async (bot, message, args) => {
-    if(!message.member.hasPermission(['MUTE_MEMBERS']))
+    if(!message.member.hasPermission(['MUTE_MEMBERS'])) return;
     const member = message.mentions.members.first(); 
     if (!member) return message.channel.send('**!lockuser <@!id> || @user **')
     // the actual bot himself
