@@ -3,6 +3,10 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
     if(message.author.bot || message.channel.type === "dm") return
     
+    if (message.deletable) {
+        message.delete();
+    }
+    
     const messageArray = message.content.split(' ');
     const cmd = messageArray[0];
     const args1 = messageArray.slice(1);
