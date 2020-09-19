@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     const args1 = messageArray.slice(1);
 
     if (cmd === '!ba'){
-         if(!message.member.hasPermission(['ADMINISTRATOR'])) return; message.channel.send('You dont have enough permission to use this command!')
+         if(!message.member.hasPermission(['ADMINISTRATOR'])) return; message.channel.send('You dont have enough permission to use this command!').then(m => m.delete({ timeout: 5000}));
         let pollChannel = message.mentions.channels.first();
         let pollDescription = args1.slice(1).join(' ');
 
