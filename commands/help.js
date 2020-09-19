@@ -27,6 +27,7 @@ module.exports.run = async (bot, message, args) => {
             .setFooter('APK', bot.user.displayAvatarURL())
             
         message.author.send(embed);
+        message.channel.send('Send You a DM!').then(m => m.delete({ timeout: 5000}));
     }
 
     //Reads the moudle.exports.config (This line of code is on commands folder, each command will read automaticly) by the second argument (the command name) and shows the information of it.
