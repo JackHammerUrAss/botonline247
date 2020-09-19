@@ -13,11 +13,13 @@ module.exports.run = async (bot, message, args) => {
 
     if (cmd === '!ba'){
          if(!message.member.hasPermission(['ADMINISTRATOR'])){return message.channel.send('You dont have enough permission to use this command!').then(m => m.delete({ timeout: 5000}))};
-         if (isNaN(args[0]) || parseInt(args[0]) <= 0) {
-            return message.reply("Please give a description").then(m => m.delete({ timeout: 5000}));
         }
         let pollChannel = message.mentions.channels.first();
         let pollDescription = args1.slice(1).join(' ');
+        
+        if(!pollChannel) {
+            return message.channel.send("Please add a valid channel ").then(m => m.delete({ timeout: 5000}))
+        }
 
         let embedPoll = new Discord.MessageEmbed()
         .setTitle('New bot update!')
@@ -27,7 +29,7 @@ module.exports.run = async (bot, message, args) => {
     
     }
 
-}
+
 
 module.exports.config = {
     name: "botannounce",
