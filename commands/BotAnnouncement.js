@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
 
         let embedPoll = new Discord.MessageEmbed()
         .setTitle('New bot update!')
-        .setThumbnail('https://img.icons8.com/plasticine/2x/approve-and-update.png')
+        .setAuthor('https://img.icons8.com/plasticine/2x/approve-and-update.png')
         .setDescription(pollDescription)
         .setColor('#FFE8E8')
         let msgEmbed = await pollChannel.send(embedPoll);
