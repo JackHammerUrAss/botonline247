@@ -6,13 +6,16 @@ module.exports.run = async (bot, message, args) => {
     if (message.deletable) {
         message.delete();
     }
-    
+
     const messageArray = message.content.split(' ');
     const cmd = messageArray[0];
     const args1 = messageArray.slice(1);
 
     if (cmd === '!ba'){
          if(!message.member.hasPermission(['ADMINISTRATOR'])){return message.channel.send('You dont have enough permission to use this command!').then(m => m.delete({ timeout: 5000}))};
+         if (isNaN(args[0]) || parseInt(args[0]) <= 0) {
+            return message.reply("Please give a description").then(m => m.delete({ timeout: 5000}));
+        }
         let pollChannel = message.mentions.channels.first();
         let pollDescription = args1.slice(1).join(' ');
 
