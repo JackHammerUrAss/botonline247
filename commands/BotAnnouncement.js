@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
 
         let embedPoll = new Discord.MessageEmbed()
         .setTitle('New bot update!')
-        .setThumbnail('https://e7.pngegg.com/pngimages/632/264/png-clipart-computer-icons-synchronization-encapsulated-postscript-icon-design-update-button-angle-text.png')
+        .setThumbnail('https://www.google.nl/url?sa=i&url=https%3A%2F%2Ficons8.com%2Ficons%2Fset%2Fupdate&psig=AOvVaw3IQKpUAm9QZJNH9IMeFO4c&ust=1600601850736000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJi2s9iQ9esCFQAAAAAdAAAAABAI')
         .setDescription(pollDescription)
         .setColor('#FFE8E8')
         let msgEmbed = await pollChannel.send(embedPoll);
