@@ -15,11 +15,11 @@ module.exports.run = async (bot, message, args) => {
         let member = message.guild.members.cache.get(args[0]) || message.guild.member(message.mentions.members.first()); 
         if(!member){
             return message.reply('Please state a user or userID')
-        };
+        }
 
         let kReason = args2.join(" ").slice(22)
         if(!kReason){
-            return message.reply('Please provide a reason.').then(m => m.delete({ timeout: 5000}));
+            return message.reply('Please provide a reason.').then(m => m.delete({ timeout: 5000}))
         }
         }
         
