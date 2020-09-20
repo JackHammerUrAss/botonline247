@@ -26,8 +26,13 @@ module.exports.run = async (bot, message, args) => {
         
         if(member){
 
-           
-            member.send(`<@${message.author.id}> send you a DM! \n ${DMReason}`)
+           const DmEmbed = new Discord.MessageEmbed()
+           .setDescription(`**You got a DM from user:** <@${message.author.id}>  `)
+           .setColor('D95EF7')
+           .addField(`Message:'  ${DMReason}`)
+          
+          
+            // member.send(`<@${message.author.id}> send you a DM! \n ${DMReason}`)
             
         } 
     }
