@@ -4,7 +4,10 @@ const botconfig = require("../botsettings.json");
 
 module.exports.run = async (bot, message, args) => {
 
-  
+    if (message.deletable) {
+        message.delete();
+    }
+
 
     let messageArray = message.content.split(" ");
     let args2 = messageArray.slice(1)
@@ -14,10 +17,12 @@ module.exports.run = async (bot, message, args) => {
     else {
         let member = message.guild.members.cache.get(args[0]) || message.guild.member(message.mentions.members.first()); 
         if(!member)
-            return message.reply('Please state a user or userID').then(m => m.delete({ timeout: 5000}));
+        return message.reply('Please state a user or userID').then(m => m.delete({ timeout: 5000}));
         
         
             let bReason = args2.join(" ").slice(22)
+            if(!bReason)
+        return message.reply("please provide a reason").then(m => m.delete({ timeout: 5000}));
         
         if(member){
 

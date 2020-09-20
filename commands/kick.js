@@ -4,7 +4,10 @@ const botconfig = require("../botsettings.json");
 
 module.exports.run = async (bot, message, args) => {
 
-    
+    if (message.deletable) {
+        message.delete();
+    }
+
 
     let messageArray = message.content.split(" ");
     let args2 = messageArray.slice(1)
@@ -24,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
         if(member){
 
         try {
-            await member.ban();
+            await member.kick();
             console.log(member.tag + " was Kicked.");
             message.channel.send (`${member} Have been Kicked from The Server!`).then(m => m.delete({ timeout: 5000}));
 
