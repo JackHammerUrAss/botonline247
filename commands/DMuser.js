@@ -29,7 +29,7 @@ module.exports.run = async (bot, message, args) => {
            .setDescription(`**You got a DM from user:** <@${message.author.id}>  `)
            .setColor('D95EF7')
            .addField('Message:',DMReason)
-           .setAuthor('APK','https://img.pngio.com/send-and-receive-direct-messages-for-instagram-from-instagram-instagram-direct-png-820_391.png')
+           .setAuthor('APK','https://www.iconfinder.com/data/icons/thick-outlines-online-project-basics/128/20-blue_message-contact-envelope-email-512.png')
            .setTimestamp();
            member.send(DmEmbed)
            message.channel.send (`${member} received your message!`).then(m => m.delete({ timeout: 5000}));
