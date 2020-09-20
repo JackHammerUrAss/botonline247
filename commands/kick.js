@@ -45,6 +45,8 @@ module.exports.run = async (bot, message, args) => {
             if(!kickChannel) return message.channel.send("Can't find incidents channel.").then(m => m.delete({ timeout: 5000}));
 
             kickChannel.send(kickEmbed)
+            message.member.send('you have been kicked')
+            message.author.send('succesfully kicked')
         }
             catch(err) {
             console.log(err);
