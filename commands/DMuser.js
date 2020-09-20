@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
     let messageArray = message.content.split(" ");
     let args2 = messageArray.slice(1)
 
-    if(!message.member.hasPermission('MANAGE_MESSAGES')) 
+    if(!message.member.hasPermission('ADMINISTRATOR')) 
         message.channel.send("You don't have permission to use that command.").then(m => m.delete({ timeout: 5000}));
     else {
     
