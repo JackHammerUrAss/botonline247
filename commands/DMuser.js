@@ -30,6 +30,7 @@ module.exports.run = async (bot, message, args) => {
            .setDescription(`**You got a DM from user:** <@${message.author.id}>  `)
            .setColor('D95EF7')
            .addField(`Message:'  ${DMReason}`)
+           member.send(DmEmbed)
           
           
             // member.send(`<@${message.author.id}> send you a DM! \n ${DMReason}`)
