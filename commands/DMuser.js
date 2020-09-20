@@ -24,13 +24,13 @@ module.exports.run = async (bot, message, args) => {
         return message.reply("please provide some text!").then(m => m.delete({ timeout: 5000}));
         
         if(member){
-
+            var serverIcon = message.guild.iconURL();
            const DmEmbed = new Discord.MessageEmbed()
            .setDescription(`**You got a DM from user:** <@${message.author.id}>  `)
            .setColor('D95EF7')
            .addField('Message:',DMReason)
            .setAuthor('APK','https://www.iconfinder.com/data/icons/thick-outlines-online-project-basics/128/20-blue_message-contact-envelope-email-512.png')
-           .setFooter('DM', bot.user.displayAvatarURL())
+           .setFooter('DM', serverIcon)
            .setTimestamp();
            member.send(DmEmbed)
            message.channel.send (`${member} received your message!`).then(m => m.delete({ timeout: 5000}));
