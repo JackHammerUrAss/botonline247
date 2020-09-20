@@ -4,9 +4,7 @@ const botconfig = require("../botsettings.json");
 
 module.exports.run = async (bot, message, args) => {
 
-    if (message.deletable) {
-        message.delete();
-    }
+    
 
     let messageArray = message.content.split(" ");
     let args2 = messageArray.slice(1)
