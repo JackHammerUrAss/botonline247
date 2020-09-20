@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     }
 
     let DMChannel = member.guild.cache.find(channel => channel.id = '753732052389462046')
-    if (!DMChannel) return message.channel.send("Can't Find channel with this channel id ")
+    if (!DMChannel) return message.channel.send("Can't Find channel with channel id equal to 753732052389462046 ")
     
     let messageArray = message.content.split(" ");
     let args2 = messageArray.slice(1)
