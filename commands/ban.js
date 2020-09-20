@@ -5,7 +5,7 @@ const botconfig = require("../botsettings.json");
 module.exports.run = async (bot, message, args) => {
 
     let messageArray = message.content.split(" ");
-    let args = messageArray.slice(1)
+    let args2 = messageArray.slice(1)
 
     if(!message.member.hasPermission('BAN_MEMBERS')) 
         message.channel.send("You don't have permission to use that command.");
@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
         let member = message.guild.members.cache.get(args[0]) || message.guild.member(message.mentions.members.first()); 
         if(!member){
             return message.reply('Please state a user or userID')}
-        let bReason = args.join(" ").slice(22)
+        let bReason = args2.join(" ").slice(22)
         
         if(member){
 
