@@ -13,13 +13,12 @@ module.exports.run = async (bot, message, args) => {
         message.channel.send("You don't have permission to use that command.").then(m => m.delete({ timeout: 5000}));
     else {
         let kUser = message.guild.members.cache.get(args[0]) || message.guild.member(message.mentions.members.first()); 
-        if(!kUser){ return message.channel.reply("please mention a user or userID").then(m => m.delete({ timeout: 5000}))};
+        if(!kUser)
+        return message.channel.reply("please mention a user or userID").then(m => m.delete({ timeout: 5000}));
         
         
         let kReason = args2.join(" ").slice(22)
-        if(!kReason)
-            return message.reply('Please provide a reason.').then(m => m.delete({ timeout: 5000}));
-        }
+
         
         if(member){
 
@@ -47,6 +46,7 @@ module.exports.run = async (bot, message, args) => {
             console.log(err);
         }
     }
+}
 }
 
 
