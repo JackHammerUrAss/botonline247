@@ -29,7 +29,7 @@ module.exports.run = async (bot, message, args) => {
             .addField("Banned by", `<@${message.author.id}> with ID ${message.author.id}`)
             .addField("Banned in", message.channel)
             .addField("reason", bReason)
-            .timestamp();
+            .setTimestamp();
 
             let banChannel = member.guild.channels.cache.find(channel => channel.id === '749752743710687282')
             if(!banChannel) return message.channel.send("Can't find incidents channel.")
