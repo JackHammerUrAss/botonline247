@@ -38,7 +38,7 @@ module.exports.config = {
     description: "Dm a user",
     usage: "!Dm",
     accessableby: "Admins",
-    aliases: ['DM','dM']
+    aliases: ['DM','dM', 'dm']
 }
 
     
