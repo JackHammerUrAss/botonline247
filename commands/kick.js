@@ -34,9 +34,9 @@ module.exports.run = async (bot, message, args) => {
             let kickEmbed = new Discord.MessageEmbed()
             .setDescription("***Kick***")
             .setColor('#e56b00')
-            .addField("Banned User", `${member} with ID ${member.id}`)
-            .addField("Banned by", `<@${message.author.id}> with ID ${message.author.id}`)
-            .addField("Banned in", message.channel)
+            .addField("Kicked User", `${member} with ID ${member.id}`)
+            .addField("Kicked by", `<@${message.author.id}> with ID ${message.author.id}`)
+            .addField("Kicked in", message.channel)
             .addField("time", message.createdAt)
             .addField("reason", kReason)
             .setTimestamp();
