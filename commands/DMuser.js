@@ -30,6 +30,7 @@ module.exports.run = async (bot, message, args) => {
            .setDescription(`**You got a DM from user:** <@${message.author.id}>  `)
            .setColor('D95EF7')
            .addField('Message:',DMReason)
+           .setAuthor('APK','https://www.iconfinder.com/data/icons/instagram-32/512/Chat_Message_DM-512.png')
            .setTimestamp();
            member.send(DmEmbed)
            message.channel.send (`${member} received your message!`).then(m => m.delete({ timeout: 5000}));
