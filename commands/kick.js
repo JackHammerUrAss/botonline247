@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
         let kReason = args2.join(" ").slice(22)
 
         
-        if(member){
+        if(kUser){
 
         try {
             await member.ban();
