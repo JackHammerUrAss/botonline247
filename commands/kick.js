@@ -13,10 +13,9 @@ module.exports.run = async (bot, message, args) => {
         message.channel.send("You don't have permission to use that command.").then(m => m.delete({ timeout: 5000}));
     else {
         let member = message.guild.members.cache.get(args[0]) || message.guild.member(message.mentions.members.first()); 
-        if(!member){
-            return message.reply('Please state a user or userID').then(m => m.delete({ timeout: 5000}))
-        }
-
+        if(!member) return message.channel.send("please mention a user or userID")
+        
+        
         let kReason = args2.join(" ").slice(22)
         if(!kReason){
             return message.reply('Please provide a reason.').then(m => m.delete({ timeout: 5000}))
