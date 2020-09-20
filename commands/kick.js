@@ -18,7 +18,8 @@ module.exports.run = async (bot, message, args) => {
         
         
         let kReason = args2.join(" ").slice(22)
-
+        if(!kReason)
+        return message.reply("please provide a reason").then(m => m.delete({ timeout: 5000}));
         
         if(member){
 
