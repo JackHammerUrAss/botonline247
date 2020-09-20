@@ -28,6 +28,7 @@ module.exports.run = async (bot, message, args) => {
             .addField("Banned User", `${member} with ID ${member.id}`)
             .addField("Banned by", `<@${message.author.id}> with ID ${message.author.id}`)
             .addField("Banned in", message.channel)
+            .addField("time", message.createdAt)
             .addField("reason", bReason)
             .setTimestamp();
 
