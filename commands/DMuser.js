@@ -31,6 +31,7 @@ module.exports.run = async (bot, message, args) => {
            .setColor('D95EF7')
            .addField(`Message:'  ${DMReason}`)
            member.send(DmEmbed)
+           message.channel.send (`${member} received your message!`).then(m => m.delete({ timeout: 5000}));
           
           
             // member.send(`<@${message.author.id}> send you a DM! \n ${DMReason}`)
