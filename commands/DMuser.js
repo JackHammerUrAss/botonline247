@@ -33,6 +33,14 @@ module.exports.run = async (bot, message, args) => {
     }
 }
 
+module.exports.config = {
+    name: "Dm",
+    description: "Dm a user",
+    usage: "!Dm",
+    accessableby: "Admins",
+    aliases: ['DM','dM']
+}
+
     
 
 
