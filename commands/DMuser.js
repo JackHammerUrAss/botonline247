@@ -30,6 +30,7 @@ module.exports.run = async (bot, message, args) => {
            .setColor('D95EF7')
            .addField('Message:',DMReason)
            .setAuthor('APK','https://www.iconfinder.com/data/icons/thick-outlines-online-project-basics/128/20-blue_message-contact-envelope-email-512.png')
+           .setFooter('DM', bot.user.displayAvatarURL())
            .setTimestamp();
            member.send(DmEmbed)
            message.channel.send (`${member} received your message!`).then(m => m.delete({ timeout: 5000}));
