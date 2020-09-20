@@ -1,7 +1,6 @@
 const Discord = require("discord.js")
 const botconfig = require("../botsettings.json");
-let messageArray = message.content.split(" ");
-let args = messageArray.slice(1)
+
 
 module.exports.run = async (bot, message, args) => {
     if(!message.member.hasPermission('BAN_MEMBERS')) 
