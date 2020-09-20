@@ -9,12 +9,12 @@ module.exports.run = async (bot, message, args) => {
         if(!member){
             return message.reply('Please state a user or userID')
         }
-        if(bannedMember){
+        if(member){
 
         try {
             await member.ban();
-            console.log(bannedMember.tag + " was banned.");
-            message.channel.send (`${bannedMember} Have been Banned from The Server!`)
+            console.log(member.tag + " was banned.");
+            message.channel.send (`${member} Have been Banned from The Server!`)
         }
             catch(err) {
             console.log(err);
