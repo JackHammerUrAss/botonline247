@@ -12,8 +12,8 @@ module.exports.run = async (bot, message, args) => {
     if(!message.member.hasPermission('KICK_MEMBERS')) 
         message.channel.send("You don't have permission to use that command.").then(m => m.delete({ timeout: 5000}));
     else {
-        let member = message.guild.members.cache.get(args[0]) || message.guild.member(message.mentions.members.first()); 
-        if(!member) return message.channel.send("please mention a user or userID")
+        let kUser = message.guild.members.cache.get(args[0]) || message.guild.member(message.mentions.members.first()); 
+        if(!kUser) return message.channel.reply("please mention a user or userID");
         
         
         let kReason = args2.join(" ").slice(22)
@@ -32,7 +32,7 @@ module.exports.run = async (bot, message, args) => {
             let kickEmbed = new Discord.MessageEmbed()
             .setDescription("***Kick***")
             .setColor('#e56b00')
-            .addField("Banned User", `${member} with ID ${member.id}`)
+            .addField("Banned User", `${kUser} with ID ${kUser.id}`)
             .addField("Banned by", `<@${message.author.id}> with ID ${message.author.id}`)
             .addField("Banned in", message.channel)
             .addField("time", message.createdAt)
