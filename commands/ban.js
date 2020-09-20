@@ -5,10 +5,14 @@ module.exports.run = async (bot, message, args) => {
     if(!message.member.hasPermission('BAN_MEMBERS')) 
         message.channel.send("You don't have permission to use that command.");
     else {
-        let bannedMember = await message.guild.members.ban(args);
+        let member = message.guild.members.cache.get(args);
+        if(!member){
+            return message.reply('Please state a user or userID')
+        }
         if(bannedMember){
 
         try {
+            await member.ban();
             console.log(bannedMember.tag + " was banned.");
             message.channel.send (`${bannedMember} Have been Banned from The Server!`)
         }
