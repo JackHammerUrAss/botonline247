@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
     else {
         let member = message.guild.members.cache.get(args[0]) || message.guild.member(message.mentions.members.first()); 
         if(!member){
-            return message.reply('Please state a user or userID')
+            return message.reply('Please state a user or userID').then(m => m.delete({ timeout: 5000}))
         }
 
         let kReason = args2.join(" ").slice(22)
