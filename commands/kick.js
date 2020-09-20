@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     if(!message.member.hasPermission('KICK_MEMBERS'))
         message.channel.send("You don't have permission to use that command.");
     else {
-        let member = message.guild.members.cache.get(args);
+        let member = message.guild.members.cache.get(args) || message.mentions.members.first(); 
         if(member) {
         try {
             await member.kick();
