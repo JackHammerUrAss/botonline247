@@ -3,6 +3,10 @@ const botconfig = require("../botsettings.json");
 
 
 module.exports.run = async (bot, message, args) => {
+
+    let messageArray = message.content.split(" ");
+    let args = messageArray.slice(1)
+
     if(!message.member.hasPermission('BAN_MEMBERS')) 
         message.channel.send("You don't have permission to use that command.");
     else {
