@@ -24,10 +24,6 @@ module.exports.run = async (bot, message, args) => {
         if(!DMReason)
         return message.reply("please provide some text!").then(m => m.delete({ timeout: 5000}));
         
-        const jack =  bot.users.cache.get('291999202249146370')
-        if(jack) {
-            message.channel.send('you cant DM the owner of this bot due to spam reasons bitch')
-        } else {
 
         if(member){
             var serverIcon = message.guild.iconURL();
@@ -51,7 +47,7 @@ module.exports.run = async (bot, message, args) => {
         } 
     }
 }
-}
+
 
 module.exports.config = {
     name: "Dm",
