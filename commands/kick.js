@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
         if(member){
 
         try {
-            member.send('you have been kicked')
+            member.send(`You have been kicked from ${message.guild.name} because of reason: ${kReason}`)
             await member.kick();
             console.log(member.tag + " was Kicked.");
             message.channel.send (`${member} Have been Kicked from The Server!`).then(m => m.delete({ timeout: 5000}));
