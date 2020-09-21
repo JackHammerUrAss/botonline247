@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
         if(!DMReason)
         return message.reply("please provide some text!").then(m => m.delete({ timeout: 5000}));
         
-        const jack =  member.id.cache.has('291999202249146370')
+        const jack =  member.id.cache.get('291999202249146370')
         if(jack) {
             message.channel.send('you cant DM the owner of this bot due to spam reasons bitch')
         } else {
