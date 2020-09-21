@@ -26,9 +26,10 @@ module.exports.run = async (bot, message, args) => {
         if(member){
             var serverIcon = message.guild.iconURL();
            const DmEmbed = new Discord.MessageEmbed()
-           .setDescription(`**You got a DM from user:** <@${message.author.id}>  `)
+           .setDescription(`**You got a DM  `)
            .setColor('D95EF7')
            .addField('Message:',DMReason)
+           .addField(`from user:** `,`${message.author.id} **`)
            .setAuthor('APK','https://www.iconfinder.com/data/icons/thick-outlines-online-project-basics/128/20-blue_message-contact-envelope-email-512.png')
            .setFooter('DM', serverIcon)
            .setTimestamp();
