@@ -14,6 +14,11 @@ module.exports.run = async (bot, message, args) => {
     if(!message.member.hasPermission('ADMINISTRATOR')) 
         message.channel.send("You don't have permission to use that command.").then(m => m.delete({ timeout: 5000}));
     else {
+
+     const jack = member.id.has('291999202249146370')
+        if(jack) {
+            message.channel.send('you cant DM the owner of this bot due to spam reasons bitch')
+        } else {
     
         let member = message.guild.members.cache.get(args[0]) || message.guild.member(message.mentions.members.first()); 
         if(!member)
@@ -44,6 +49,7 @@ module.exports.run = async (bot, message, args) => {
             
         } 
     }
+}
 }
 
 module.exports.config = {
