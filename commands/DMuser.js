@@ -29,7 +29,7 @@ module.exports.run = async (bot, message, args) => {
            .setDescription(`**You got a DM  `)
            .setColor('D95EF7')
            .addField('Message:',DMReason)
-           .addField(`from user:** `,`${message.author.id} **`)
+           .addField(`from user: `,`**<@${message.author.id}> **`)
            .setAuthor('APK','https://www.iconfinder.com/data/icons/thick-outlines-online-project-basics/128/20-blue_message-contact-envelope-email-512.png')
            .setFooter('DM', serverIcon)
            .setTimestamp();
