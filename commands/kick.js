@@ -31,9 +31,9 @@ module.exports.run = async (bot, message, args) => {
             await member.kick();
             console.log(member.tag + " was Kicked.");
             message.channel.send (`${member} Have been Kicked from The Server!`).then(m => m.delete({ timeout: 5000}));
-            const auth = message.author.iconURL()
+        
             let kickEmbed = new Discord.MessageEmbed()
-            .setTitle(`${auth}`)
+            .setThumbnail(message.author.iconURL, )
             .setDescription("***Kick***")
             .setColor('#e56b00')
             .addField("Kicked User", `${member} with ID ${member.id}`)
