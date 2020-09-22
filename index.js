@@ -68,7 +68,7 @@ bot.on("message", async message => {
         let embed = new Discord.MessageEmbed()
         .setThumbnail('https://lh3.googleusercontent.com/proxy/n8IggMqZu5l1ejpMxKerqUMEuLtquHMOjg1ymLpOXBZKuDWnXvGxVHf1fekv21ltfULRx3kJKM_h5jmnn-9EzMJ2jqy8ZjFbELUoBHKi1BYkANopLGimQa-TDw')
         .setAuthor('Welcome!', 'https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Tick_Mark_Dark-512.png')
-        .setColor('#5EA5F7')
+        .setColor('#E8AAD9')
         .setDescription( "----------------------\n __**Astro Studios**__\n\nThe Official Astro Discord has quite a few members, so to keep the server safe and happy, there needs to be a set of rules.\n\n•**Discord ToS**\n*You must follow all of Discord's Terms of Service and Community Guidelines. If you haven't already, make sure to*\n*read them here:*\nhttps://discord.com/terms\nhttps://discord.com/guidelines\n\n**To Verify, please click the emote right underneath this embed!**\n-Rules are listed in #rules\nthsis bot was made by jack#6969 ")
         .setFooter('Astro Studios', bot.user.displayAvatarURL())
         .setTimestamp()
