@@ -66,12 +66,11 @@ bot.on("message", async message => {
     if(commandfile) commandfile.run(bot,message,args )
     if(cmd === `${prefix}tj`){
         let embed = new Discord.MessageEmbed()
-        .setTitle('Welcome to APK, Verification Embed')
         .setThumbnail('https://lh3.googleusercontent.com/proxy/n8IggMqZu5l1ejpMxKerqUMEuLtquHMOjg1ymLpOXBZKuDWnXvGxVHf1fekv21ltfULRx3kJKM_h5jmnn-9EzMJ2jqy8ZjFbELUoBHKi1BYkANopLGimQa-TDw')
         .setAuthor('Welcome!', 'https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Tick_Mark_Dark-512.png')
         .setColor('#5EA5F7')
         .setDescription( "----------------------\n __**APK Community**__\n\nThe Official APK Discord has quite a few members, so to keep the server safe and happy, there needs to be a set of rules.\n\n•**Discord ToS**\n*You must follow all of Discord's Terms of Service and Community Guidelines. If you haven't already, make sure to*\n*read them here:*\nhttps://discord.com/terms\nhttps://discord.com/guidelines\n\n**To Verify, please click the emote right underneath this embed!**")
-        .setFooter('please react to this Embed to verify', bot.user.displayAvatarURL())
+        .setFooter('Astro Studios', bot.user.displayAvatarURL())
         .setTimestamp()
          let msgEmbed = await message.channel.send(embed)
         msgEmbed.react('✅')
