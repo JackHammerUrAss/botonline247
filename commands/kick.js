@@ -25,12 +25,15 @@ module.exports.run = async (bot, message, args) => {
         return message.reply("please provide a reason").then(m => m.delete({ timeout: 5000}));
         
         if(member){
+            
+        try{
 
-        try {
-            let MemberEmbed = new Discord.MessageEmbed()
+                    let MemberEmbed = new Discord.MessageEmbed()
             .setTitle('You have been kicked!')
             .addField(`from guild: ${message.guild.name} \n\nreason: ${kReason} \n\nif you feel like this was an unjustified kick, feel free to join back and message staff.`);
             member.send(MemberEmbed)
+
+
            // member.send(`You have been kicked from ${message.guild.name} because of reason: ${kReason}`)
             await member.kick();
             console.log(member.tag + " was Kicked.");
