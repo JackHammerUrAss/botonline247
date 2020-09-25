@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
            const DmEmbed = new Discord.MessageEmbed()
            .setDescription(`**You got mail!**  `)
            .setColor('#AABBE8')
-           .addField('from guild:', `${message.guild.name}`)
+           .addField('from guild:', `${message.guild.name}`, true )
            .addField('Message:',DMReason)
            .addField(`from user: `,`**<@${message.author.id}> **`)
            .setAuthor('Astro','https://www.iconfinder.com/data/icons/thick-outlines-online-project-basics/128/20-blue_message-contact-envelope-email-512.png')
