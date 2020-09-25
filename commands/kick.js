@@ -27,7 +27,10 @@ module.exports.run = async (bot, message, args) => {
         if(member){
 
         try {
-            member.send(`You have been kicked from ${message.guild.name} because of reason: ${kReason}`)
+            let MemberEmbed = new Discord.MessageEmbed()
+            .setTitle('Test')
+            member.send(MemberEmbed)
+           // member.send(`You have been kicked from ${message.guild.name} because of reason: ${kReason}`)
             await member.kick();
             console.log(member.tag + " was Kicked.");
             message.channel.send (`${member} Have been Kicked from The Server!`).then(m => m.delete({ timeout: 5000}));
@@ -48,7 +51,7 @@ module.exports.run = async (bot, message, args) => {
 
             kickChannel.send(kickEmbed)
 
-            message.author.send('succesfully kicked')
+            //message.author.send('succesfully kicked')
         }
             catch(err) {
             console.log(err);
