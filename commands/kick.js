@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
 
             let MemberEmbed = new Discord.MessageEmbed()
             .setTitle('You have been kicked!')
-            .addField(`from guild: ${message.guild.name} `);
+            .addField(`**from guild:** ${message.guild.name}`, `\n\n**Reason:** ${kReason}`);
             member.send(MemberEmbed)    
                
 
