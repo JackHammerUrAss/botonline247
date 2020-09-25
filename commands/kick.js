@@ -28,10 +28,11 @@ module.exports.run = async (bot, message, args) => {
             
         try{
 
-                    let MemberEmbed = new Discord.MessageEmbed()
+            let MemberEmbed = new Discord.MessageEmbed()
             .setTitle('You have been kicked!')
-            .addField(`from guild: ${message.guild.name} \n\nreason: ${kReason} \n\nif you feel like this was an unjustified kick, feel free to join back and message staff.`);
-            member.send(MemberEmbed)
+            .addField(`from guild: ${message.guild.name} `);
+            member.send(MemberEmbed)    
+               
 
 
            // member.send(`You have been kicked from ${message.guild.name} because of reason: ${kReason}`)
