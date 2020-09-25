@@ -29,11 +29,11 @@ module.exports.run = async (bot, message, args) => {
             var serverIcon = message.guild.iconURL();
            const DmEmbed = new Discord.MessageEmbed()
            .setDescription(`**You got mail!**  `)
-           .setColor('D95EF7')
+           .setColor('#AABBE8')
            .addField('from guild:', `${message.guild.name}`)
            .addField('Message:',DMReason)
            .addField(`from user: `,`**<@${message.author.id}> **`)
-           .setAuthor('APK','https://www.iconfinder.com/data/icons/thick-outlines-online-project-basics/128/20-blue_message-contact-envelope-email-512.png')
+           .setAuthor('Astro','https://www.iconfinder.com/data/icons/thick-outlines-online-project-basics/128/20-blue_message-contact-envelope-email-512.png')
            .setFooter('DM', serverIcon)
            .setTimestamp();
            member.send(DmEmbed)
