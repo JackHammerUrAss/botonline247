@@ -92,10 +92,10 @@ bot.on("messageReactionAdd", async (reaction, user) => {
           const welcomeChannel = reaction.message.guild.channels.cache.find(channel => channel.id === '743829943221354506')
           const embed = new Discord.MessageEmbed()
           .setTitle('A new user has verified!')
-          .setAuthor(`${message.author.displayAvatarURL}`)
+          .setAuthor(message.author.displayAvatarURL())
           .setColor('#F7F65E ')
           .setDescription(`user ${user} has verified `)
-          .setFooter('APK',  bot.user.displayAvatarURL())
+          .setFooter('Orion',  bot.user.displayAvatarURL())
           .setTimestamp()
           welcomeChannel.send(embed);
       }  
