@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
                 .setThumbnail('https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
                 .setDescription("APK commands in this server start with `!`\n commands are used for moderators or members")
                 .addFields(
-                    { name: '**Help & Support**', value: '[guides](https://dolfinroemer.wixsite.com/apocolyptic-knights/faq) \n[Commands List](https://dolfinroemer.wixsite.com/astro-studios/lege-pagina-1) \n[Recent updates](https://dolfinroemer.wixsite.com/apocolyptic-knights/lege-pagina)' , inline: true}, 
+                    { name: '**Help & Support**', value: '[guides](https://dolfinroemer.wixsite.com/apocolyptic-knights/faq) \n[Commands List](https://dolfinroemer.wixsite.com/orion/lege-pagina-1) \n[Recent updates](https://dolfinroemer.wixsite.com/apocolyptic-knights/lege-pagina)' , inline: true}, 
                    )
             .setColor('#00FFF3')
             .setFooter('Astro', bot.user.displayAvatarURL())
