@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
         var embed = new Discord.MessageEmbed()
             .setAuthor(`Server Help for ${message.guild.name}`)
                 .setThumbnail('https://lh3.googleusercontent.com/9MqtYaV8CA1YmuZ4xo05hoMrbzskV9tsjc7HWA7F5sx-gjeA1Dm56fDqTHPH--j5DQ-OpA=s85')
-                .setDescription("APK commands in this server start with `!`\n commands are used for moderators or members")
+                .setDescription("Orion commands in this server start with `!`\n commands are used for moderators or members")
                 .addFields(
                     { name: '**Help & Support**', value: '[guides](https://dolfinroemer.wixsite.com/apocolyptic-knights/faq) \n[Commands List](https://dolfinroemer.wixsite.com/orion/lege-pagina-1) \n[Recent updates](https://dolfinroemer.wixsite.com/apocolyptic-knights/lege-pagina)' , inline: true}, 
                    )
